@@ -1,0 +1,56 @@
+from corpus.statuses import SLEPTSOV_GM_PEASANT_FEMALE, SLEPTSOV_TI_PEASANT_MALE
+from verso.ru.dsl import (Gender, Month, RecordDefaults, death, death_month, death_records, page,
+                          person)
+from verso.ru.dsl.causes_of_death import NATURAL
+from verso.ru.dsl.statuses import YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE
+
+zhuravkino_deaths_1803 = death_records(
+    "ЦГАРМ", "57", "6", "45", "Журавкино", "Николаевская",
+    1803,
+    *page("206об",
+          *death_month(Month.JANUARY,
+                       death(1, Gender.MALE, 8, None,
+                             deceased=person("Стефан", "Федоров"), age=80),
+                       ),
+          ),
+    *page("207",
+          *death_month(Month.JANUARY,
+                       death(1, Gender.FEMALE, 14, None,
+                             deceased=person("Мария", "Феоктистова", status=SLEPTSOV_GM_PEASANT_FEMALE), age=70),
+                       ),
+          *death_month(Month.FEBRUARY,
+                       death(2, Gender.MALE, 9, None,
+                             deceased=person("Трафим", "Максимов"), age=90),
+                       ),
+          *death_month(Month.MARCH,
+                       death(3, Gender.MALE, 3, None,
+                             deceased=person("Ларион", "Захаров"), age=70),
+                       ),
+          ),
+    *page("207об",
+          *death_month(Month.AUGUST,
+                       death(2, Gender.FEMALE, 28, None,
+                             deceased=person("Дарья", "Иванова"), age=78),
+                       death(4, Gender.MALE, 27, None,
+                             deceased=person("Василий", "Михайлов"), age=80),
+                       ),
+          *death_month(Month.SEPTEMBER,
+                       death(5, Gender.MALE, 2, None,
+                             deceased=person("Трафим", "Александров", residence="Авдалово", status=SLEPTSOV_TI_PEASANT_MALE), age=80,
+                             source_age_error="«80» при 53 годах в 1795 (РС 1811 д. 436 двор 14, «умре 1802») — "
+                                              "возраст старика завышен"),
+                       ),
+          ),
+    *page("208",
+          *death_month(Month.DECEMBER,
+                       death(3, Gender.FEMALE, 8, None,
+                             deceased=person("Мелания", "Николаева"), age=57),
+                       ),
+          ),
+    defaults=RecordDefaults(
+        residence="Журавкино",
+        status_male=YASAK_PEASANT_MALE,
+        status_female=YASAK_PEASANT_FEMALE,
+        cause_of_death=NATURAL
+    ),
+)

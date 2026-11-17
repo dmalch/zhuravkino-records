@@ -1,0 +1,37 @@
+from verso.ru.dsl import (Gender, Month, RecordDefaults, death, death_month, death_records, page,
+                          person)
+from verso.ru.dsl.statuses import YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE
+
+zhuravkino_deaths_1796 = death_records(
+    "ГАРО", "627", "298", "32", "Журавкино", "Николая Чудотворца",
+    1796,
+    *page("570",
+          *death_month(Month.MARCH,
+                       death(1, Gender.MALE, 29, None,
+                             deceased=person("Григорий", "Васильев"), age=6),
+                       ),
+          ),
+    *page("570об",
+          *death_month(Month.JULY,
+                       death(2, Gender.MALE, 24, None,
+                             deceased=person("Гаврил", "Иванов"), age=50),
+                       death(3, Gender.MALE, 26, None,
+                             deceased=person("Тимофей", "Ефимов"), age=3),
+                       ),
+          *death_month(Month.SEPTEMBER,
+                       death(4, Gender.MALE, 1, None,
+                             deceased=person("Василий", "Савин"), age=72),
+                       death(5, Gender.FEMALE, 10, None,
+                             deceased=person("Евдокия", "Николаева"), age=42),
+                       ),
+          *death_month(Month.NOVEMBER,
+                       death(6, Gender.MALE, 8, None,
+                             deceased=person("Артемий", "Казмин"), age=73),
+                       ),
+          ),
+    defaults=RecordDefaults(
+        residence="Журавкино",
+        status_male=YASAK_PEASANT_MALE,
+        status_female=YASAK_PEASANT_FEMALE,
+    ),
+)

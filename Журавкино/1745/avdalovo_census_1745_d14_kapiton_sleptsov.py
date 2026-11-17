@@ -1,0 +1,33 @@
+
+from verso.ru.dsl import CensusRole, census_records, household, member, page, person
+
+census = census_records(
+    "ГАТО", "3", "1", "14", "Авдалово",
+    1745,
+    *page("257",
+          household("1",
+                    member(1, person("Ларионъ", "Васильевъ", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.HEAD, age=53),
+                    member(2, person("Василей", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, age=28),
+                    member(3, person("Григорей", "Васильев", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, ref_member=2, age=3),
+                    member(4, person("Аѳонасей", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, age=18),
+                    member(5, person("Алексѣй", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, age=10)),
+          ),
+    *page("258",
+          household("2",
+                    member(1, person("Сидоръ", "Ѳедоровъ", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.HEAD, age=65),
+                    member(2, person("Степан", "Исидоров", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, age=28),
+                    member(3, person("Василей", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, ref_member=2, age=2)),
+          household("3",
+                    member(1, person("Нестеръ", "Пракофьевъ", status="крестьянин помещика Капитона Богдановича Слепцова"),
+                           CensusRole.HEAD, age=45, origin="Овчинники", arrival_reason="из Овчинники",
+                           comment="Касимовского уезда из деревни Злобиной Авчиники тож"),
+                    member(2, person("Акимъ", "Несторов", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, age=2)),
+          household("4",
+                    member(1, person("Егоръ", "Филиповъ", status="крестьянин помещика Капитона Богдановича Слепцова"),
+                           CensusRole.HEAD, age=45, origin="Турмадеевка", arrival_reason="из Турмадеевка",
+                           comment="Кадомского уезда из деревни Турмадеевки"),
+                    member(2, person("Логин", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, age=14),
+                    member(3, person("Дѣментей", status="крестьянин помещика Капитона Богдановича Слепцова"), CensusRole.SON, age=8)),
+          ),
+ archive_suffix="3-1-14-part-1", suffix_in_res_names=True,
+)

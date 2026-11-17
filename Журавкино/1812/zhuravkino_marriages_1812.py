@@ -1,0 +1,48 @@
+from corpus.statuses import (SLEPTSOV_EF_PEASANT_GIRL, SLEPTSOV_GM_PEASANT_BOY,
+                             SLEPTSOV_GM_PEASANT_GIRL)
+from verso.ru.dsl import (Month, RecordDefaults, marriage, marriage_month, marriage_records, page,
+                          person)
+from verso.ru.dsl.statuses import (YASAK_PEASANT_BOY, YASAK_PEASANT_FEMALE, YASAK_PEASANT_GIRL,
+                                   YASAK_PEASANT_MALE)
+
+zhuravkino_marriages_1812 = marriage_records(
+    "ЦГАРМ", "57", "6", "79а", "Журавкино", "Николаевская",
+    1812,
+    *page("?",
+          *marriage_month(Month.JANUARY,
+                          marriage(1, 14,
+                                   groom=person("Никита", "Авдеев", residence="Авдалово", status="отрок из крестьян помещицы Екатерины Фирсовны Слепцовой"),
+                                   bride=person("Дарья", "Данилова", residence="Авдалово", status=SLEPTSOV_EF_PEASANT_GIRL)),
+                          marriage(2, 21,
+                                   groom=person("Иван", "Афанасьев", status=SLEPTSOV_GM_PEASANT_BOY),
+                                   bride=person("Ульяна", "Павлова", status=SLEPTSOV_GM_PEASANT_GIRL)),
+                          ),
+          *marriage_month(Month.FEBRUARY,
+                          marriage(3, 14,
+                                   groom=person("Андрей", "Амельянов", status=YASAK_PEASANT_BOY),
+                                   bride=person("Марина", "Абрамова", residence="Крюковка")),
+                          ),
+          *marriage_month(Month.APRIL,
+                          marriage(4, 28,
+                                   groom=person("Ниофет", "Амельянов", status=YASAK_PEASANT_BOY),
+                                   bride=person("Марфа", "Федорова", residence="Пичевка")),
+                          marriage(5, 30,
+                                   groom=person("Григорий", "Иванов", status=YASAK_PEASANT_BOY),
+                                   bride=person("Ульяна", "Иванова")),
+                          marriage(6, 30,
+                                   groom=person("Иван", "Антонов", status=YASAK_PEASANT_BOY),
+                                   bride=person("Параскева", "Тимофеева", residence="Анаево", status=YASAK_PEASANT_FEMALE)),
+                          ),
+          *marriage_month(Month.NOVEMBER,
+                          marriage(7, 10,
+                                   groom=person("Дмитрий", "Антонов", status=SLEPTSOV_GM_PEASANT_BOY),
+                                   bride=person("Дарья", "Андриянова", status=SLEPTSOV_GM_PEASANT_GIRL)),
+                          ),
+          ),
+    defaults=RecordDefaults(
+        residence="Журавкино",
+        status_male=YASAK_PEASANT_MALE,
+        status_female=YASAK_PEASANT_FEMALE,
+        status_bride=YASAK_PEASANT_GIRL
+    ),
+)

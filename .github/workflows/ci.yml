@@ -1,0 +1,56 @@
+name: CI
+
+# Линтер DSL и выгрузка записей в JSON на той версии verso, что в pyproject.toml; gitleaks — по дереву.
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v10.3.3
+
+      - name: make bootstrap check
+        run: make bootstrap check
+
+      - name: Records JSON
+        uses: actions/upload-artifact@v7
+        with:
+          name: records
+          path: records/
+
+  secrets:
+    name: Secrets (gitleaks)
+    runs-on: ubuntu-latest
+    env:
+      GITLEAKS_VERSION: 8.30.1
+      GITLEAKS_SHA256: 551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install gitleaks
+        run: |
+          set -euo pipefail
+          f="gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          curl -fsSLo "$f" "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/$f"
+          echo "${GITLEAKS_SHA256}  $f" | sha256sum -c -
+          tar -xzf "$f" gitleaks
+          sudo install gitleaks /usr/local/bin/gitleaks
+
+      - name: gitleaks
+        run: gitleaks dir . --redact --exit-code 1

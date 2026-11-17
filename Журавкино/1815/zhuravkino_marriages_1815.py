@@ -1,0 +1,45 @@
+from corpus.statuses import (SLEPTSOV_AT_PEASANT_BOY, SLEPTSOV_AT_PEASANT_GIRL,
+                             SLEPTSOV_AT_PEASANT_MALE)
+from verso.ru.dsl import (Month, RecordDefaults, marriage, marriage_month, marriage_records, page,
+                          person)
+from verso.ru.dsl.statuses import (YASAK_PEASANT_BOY, YASAK_PEASANT_FEMALE, YASAK_PEASANT_GIRL,
+                                   YASAK_PEASANT_MALE)
+
+zhuravkino_marriages_1815 = marriage_records(
+    "ЦГАРМ", "57", "1", "394", "Журавкино", "Николаевская",
+    1815,
+    *page("?",
+          *marriage_month(Month.JANUARY,
+                          marriage(1, 28,
+                                   groom=person("Михаил", "Семенов", status=YASAK_PEASANT_BOY),
+                                   bride=person("Акилина", "Васильева", residence="Анаево"),
+                                   witness1=person("Емельян", "Васильев"),
+                                   witness2=person("Гаврила", "Гаврилов")),
+                          marriage(2, 28,
+                                   groom=person("Федот", "Васильев", status=YASAK_PEASANT_BOY),
+                                   bride=person("Евдокия", "Федорова", residence="Анаево"),
+                                   witness1=person("Иван", "Ефимов"),
+                                   witness2=person("Кондратий", "Семенов")),
+                          ),
+          *marriage_month(Month.NOVEMBER,
+                          marriage(3, 8,
+                                   groom=person("Пимен", "Гардеев", status=YASAK_PEASANT_BOY),
+                                   bride=person("Фекла", "Китаева", residence="Промзино"),
+                                   witness1=person("Иван", "Родионов"),
+                                   witness2=person("Иван", "Семенов"),
+                                   witness3=person("Фоломей", "Пахомов")),
+                          marriage(4, 8,
+                                   groom=person("Казма", "Дементьев", residence="Авдалово", status=SLEPTSOV_AT_PEASANT_BOY),
+                                   bride=person("Анна", "Данилова", residence="Авдалово", status=SLEPTSOV_AT_PEASANT_GIRL),
+                                   witness1=person("Деомид", "Егоров", residence="Авдалово", status=SLEPTSOV_AT_PEASANT_MALE),
+                                   witness2=person("Антон", "Александров", residence="Авдалово", status=SLEPTSOV_AT_PEASANT_MALE),
+                                   witness3=person("Митрофан", "Алексеев", residence="Авдалово", status=SLEPTSOV_AT_PEASANT_MALE)),
+                          ),
+          ),
+    defaults=RecordDefaults(
+        residence="Журавкино",
+        status_male=YASAK_PEASANT_MALE,
+        status_female=YASAK_PEASANT_FEMALE,
+        status_bride=YASAK_PEASANT_GIRL
+    ),
+)

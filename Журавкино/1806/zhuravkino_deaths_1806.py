@@ -1,0 +1,50 @@
+from corpus.statuses import SLEPTSOV_EF_PEASANT_MALE, SLEPTSOV_EF_PEASANT_SON
+from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, death, death_month,
+                          death_records, page, person, relative)
+from verso.ru.dsl.causes_of_death import NATURAL, NOT_IN_DOCUMENT
+from verso.ru.dsl.statuses import (YASAK_PEASANT_DAUGHTER, YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE,
+                                   YASAK_PEASANT_SON)
+
+zhuravkino_deaths_1806 = death_records(
+    "ЦГАРМ", "57", "6", "63", "Журавкино", "Николаевская",
+    1806,
+    *page("?",
+          *death_month(Month.MAY,
+                       death(1, Gender.MALE, 18, None,
+                             deceased=person("Клим", "Ефимов"), age=19),
+                       ),
+          *death_month(Month.AUGUST,
+                       death(3, Gender.MALE, 10, None,
+                             deceased=person("Петр", residence="Авдалово", status=SLEPTSOV_EF_PEASANT_SON), age=2,
+                             relatives=[relative(person("Иван", "Андреев", status=SLEPTSOV_EF_PEASANT_MALE), Relationship.FATHER)]),
+                       death(4, Gender.MALE, 13, None,
+                             deceased=person("Елизар", residence="Авдалово", status=SLEPTSOV_EF_PEASANT_SON), age=1,
+                             relatives=[relative(person("Моисей", status=SLEPTSOV_EF_PEASANT_MALE), Relationship.FATHER)]),
+                       death(5, Gender.MALE, 20, None,
+                             deceased=person("Никифор", status=YASAK_PEASANT_SON), age=1,
+                             relatives=[relative(person("Никифор", "Нестеров"), Relationship.FATHER)]),
+                       ),
+          *death_month(Month.SEPTEMBER,
+                       death(1, Gender.FEMALE, 17, None,
+                             deceased=person("Ирина", residence="Авдалово", status="крестьянская дочь помещицы Екатерины Фирстовны Слепцовой"), age="6 м",
+                             relatives=[relative(person("Иван", "Андреев", status=SLEPTSOV_EF_PEASANT_MALE), Relationship.FATHER)],
+                             cause_of_death=NOT_IN_DOCUMENT),
+                       death(2, Gender.MALE, 13, None,
+                             deceased=person("Семен", "Константинов"), age=70),
+                       death(2, Gender.FEMALE, 24, None,
+                             deceased=person("Ирина", status=YASAK_PEASANT_DAUGHTER), age=7,
+                             relatives=[relative(person("Иван", "Семенов"), Relationship.FATHER)],
+                             cause_of_death=NOT_IN_DOCUMENT),
+                       ),
+          *death_month(Month.DECEMBER,
+                       death(6, Gender.MALE, 3, None,
+                             deceased=person("Феодот", "Ефимов"), age=56),
+                       ),
+          ),
+    defaults=RecordDefaults(
+        residence="Журавкино",
+        status_male=YASAK_PEASANT_MALE,
+        status_female=YASAK_PEASANT_FEMALE,
+        cause_of_death=NATURAL
+    ),
+)

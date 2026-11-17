@@ -1,0 +1,18 @@
+# Проект данных села: DSL читается и проверяется библиотекой verso (https://github.com/verso-genealogy/verso), версия — тег v0.1.41.
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zhuravkino-records"
+version = "0"
+description = "Метрические книги и ревизии села Журавкино — записи в DSL verso"
+requires-python = ">=3.14"
+license = "CC-BY-4.0"
+dependencies = [
+    "verso-core @ git+https://github.com/verso-genealogy/verso@v0.1.41#subdirectory=packages/verso-core",
+    "verso-ru @ git+https://github.com/verso-genealogy/verso@v0.1.41#subdirectory=packages/verso-ru",
+]
+
+[tool.setuptools]
+packages = ["corpus"]

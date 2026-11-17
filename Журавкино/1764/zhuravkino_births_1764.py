@@ -1,0 +1,43 @@
+from verso.ru.dsl import (Gender, Month, RecordDefaults, birth, birth_month, birth_records, page,
+                          person)
+from verso.ru.dsl.statuses import YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE
+
+avdalovo_births_1764 = birth_records(
+    "ГАРО", "627", "255", "3", "Авдалово", "Николая Чудотворца",
+    1764,
+    *page("?",
+          *birth_month(Month.JANUARY,
+                       birth(1, Gender.MALE, 17, None,
+                             child=person("Антоний"),
+                             father=person("Илья", "Казмин", residence="Журавкино")),
+                       ),
+          *birth_month(Month.MARCH,
+                       birth(2, Gender.MALE, 26, None,
+                             child=person("Гаврил"),
+                             father=person("Гаврила", "Семенов", residence="Журавкино")),
+                       birth(3, Gender.MALE, 30, None,
+                             child=person("Иоанн"),
+                             father=person("Семен", "Константинов", residence="Журавкино")),
+                       ),
+          *birth_month(Month.JUNE,
+                       birth(4, Gender.MALE, 27, None,
+                             child=person("Самсон"),
+                             father=person("Трофим", "Константинов", residence="Журавкино")),
+                       ),
+          *birth_month(Month.SEPTEMBER,
+                       birth(5, Gender.MALE, 25, None,
+                             child=person("Сергей"),
+                             father=person("Семен", "Савельев", residence="Журавкино")),
+                       ),
+          *birth_month(Month.OCTOBER,
+                       birth(6, Gender.FEMALE, 9, None,
+                             child=person("Афанасия"),
+                             father=person("Иаков", "Савельев", residence="Журавкино")),
+                       ),
+          ),
+    defaults=RecordDefaults(
+        residence="Авдалово",
+        status_male=YASAK_PEASANT_MALE,
+        status_female=YASAK_PEASANT_FEMALE
+    ),
+)

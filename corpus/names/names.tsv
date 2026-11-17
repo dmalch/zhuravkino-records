@@ -1,0 +1,663 @@
+sex	name	bases	canonical	source	note
+	Аверий		Аверий	legacy	
+	Аврамий		Аврамий	legacy	
+	Агап		Агап	legacy	
+	Агапий		Агапий	legacy	
+	Адмак			ignore	
+	Адман			ignore	
+	Админ			ignore	
+	Аетий		Аетий	legacy	
+	Аксентий		Аксентий	legacy	
+	Анания		Анания	legacy	
+	Антипий		Антипий	legacy	
+	Антоний		Антоний	legacy	
+	Антропий		Антропий	legacy	
+	Арсентий		Арсентий	legacy	
+	Асафий		Асафий	legacy	
+	Аффоний		Аффоний	legacy	
+	Ахиллий		Ахиллий	legacy	
+	Ашай			ignore	
+	Баика			ignore	
+	Баина			ignore	
+	Велмиксий			ignore	
+	Викторин		Викторин	legacy	
+	Виряс			ignore	
+	Виряска			ignore	
+	Власий		Власий	legacy	
+	Вячкинза			ignore	
+	Голдн			ignore	
+	Денисий		Денисий	legacy	
+	Дионис		Дионис	legacy	
+	Дометий		Дометий	legacy	
+	Евиласий		Евиласий	legacy	
+	Евстратий		Евстратий	legacy	
+	Евфрасий		Евфрасий	legacy	
+	Елевферий		Елевферий	legacy	
+	Еллий		Еллий	legacy	
+	Епифаний		Епифаний	legacy	
+	Ермилий		Ермилий	legacy	
+	Ефимий		Ефимий	legacy	
+	Захарий		Захарий	legacy	
+	Захария		Захария	legacy	
+	Иоанникий		Иоанникий	legacy	
+	Исакий		Исакий	legacy	
+	Иувеналий		Иувеналий	legacy	
+	Иулий		Иулий	legacy	
+	Келгай			ignore	
+	Кемай			ignore	
+	Кирдяй			ignore	
+	Кирей		Кирей	legacy	
+	Клим		Клим	legacy	
+	Климентий		Климентий	legacy	
+	Кямай			ignore	
+	Левай			ignore	
+	Лимний		Лимний	legacy	
+	Лкуш			ignore	
+	Макарий		Макарий	legacy	
+	Маскай			ignore	
+	Масквит			ignore	
+	Мелентий		Мелентий	legacy	
+	Мелка			ignore	
+	Мелсит			ignore	
+	Мокий		Мокий	legacy	
+	Мосей		Мосей	legacy	
+	Мурдака			ignore	
+	Назарий		Назарий	legacy	
+	Настасий		Настасий	legacy	
+	Никола		Никола	legacy	
+	Оска			ignore	
+	Пазяй			ignore	
+	Пасмур			ignore	
+	Патапий		Патапий	legacy	
+	Пахомий		Пахомий	legacy	
+	Пьянза			ignore	
+	Резеика			ignore	
+	Рузман			ignore	
+	Русяй			ignore	
+	Сабай			ignore	
+	Савватей		Савватей	legacy	
+	Сакя			ignore	
+	Силантий		Силантий	legacy	
+	Софроний		Софроний	legacy	
+	Тарасий		Тарасий	legacy	
+	Трифиллий		Трифиллий	legacy	
+	Тунка			ignore	
+	Учай			ignore	
+	Ушмей			ignore	
+	Федотий		Федотий	legacy	
+	Чепай			ignore	
+	Черепай			ignore	
+	Чяда			ignore	
+	Чядай			ignore	
+	Шиндяпа			ignore	
+	Шумила			ignore	
+	Яким		Яким	legacy	
+	Ямка			ignore	
+F	Агарь			ignore	
+F	Агафия	Агафья		legacy	
+F	Агафья			legacy	
+F	Аграфена	Агриппина		legacy	
+F	Агрепина	Агриппина		legacy	
+F	Агрипена	Агриппина		legacy	
+F	Агрипина	Агриппина		legacy	
+F	Агриппина			legacy	
+F	Агрофена	Агриппина		legacy	
+F	Анатолия			legacy	
+F	Анисия	Анисья		legacy	
+F	Анисья			legacy	
+F	Афимия	Ефимия		legacy	
+F	Афимья	Ефимия		legacy	
+F	Афосинья	Ефросиния		legacy	
+F	Афрасиния	Ефросиния		legacy	
+F	Афрасинья	Ефросиния		legacy	
+F	Афросиния			ignore	
+F	Афросинья	Ефросиния		legacy	
+F	Ахилина			ignore	
+F	Василиса			legacy	
+F	Василисса	Василиса		legacy	
+F	Веселиса	Василиса		legacy	
+F	Висса			ignore	
+F	Гаиания	Гаяния		legacy	
+F	Гали	Галя		legacy	
+F	Галя			legacy	
+F	Гаяния			legacy	
+F	Графена	Агриппина		legacy	
+F	Дария	Дарья		legacy	
+F	Дарья			legacy	
+F	Досифея			legacy	
+F	Евросиния	Ефросиния		legacy	
+F	Евросинья	Ефросиния		legacy	
+F	Евстафия			legacy	
+F	Евфимия	Ефимия		legacy	
+F	Евфрасиния	Ефросиния		legacy	
+F	Евфросиния	Ефросиния		legacy	
+F	Евфросинья	Ефросиния		legacy	
+F	Елизавета			legacy	
+F	Елисавета	Елизавета		legacy	
+F	Еннафа	Эннафа		legacy	
+F	Ефимия			legacy	
+F	Ефимья	Ефимия		legacy	
+F	Ефрасиния	Ефросиния		legacy	
+F	Ефросиния			legacy	
+F	Ефросинья	Ефросиния		legacy	
+F	Ироида	Ираида		legacy	
+F	Иулиания	Юлиания		legacy	
+F	Иулия	Юлия		legacy	
+F	Иуния	Юния		legacy	
+F	Иустина	Юстина		legacy	
+F	Иустиния	Юстина		legacy	
+F	Кирилла	-		legacy	
+F	Марка			legacy	
+F	Марта			legacy	
+F	Матиана			ignore	
+F	Матрюшка			ignore	
+F	Моика			legacy	
+F	Моико	Моика		legacy	
+F	Наталия	Наталья		legacy	
+F	Наталья			legacy	
+F	Ненила	Неонилла		legacy	
+F	Неонила	Неонилла		legacy	
+F	Неонилла			legacy	
+F	Нионила	Неонилла		legacy	
+F	Отилия			ignore	
+F	Офимья	Ефимия		legacy	
+F	Палагея	Пелагея		legacy	
+F	Параскева	Прасковья		legacy	
+F	Параскова			ignore	
+F	Парасковья	Прасковья		legacy	
+F	Парскева	Прасковья		legacy	
+F	Пелагея			legacy	
+F	Пелагия	Пелагея		legacy	
+F	Перагея	Пелагея		legacy	
+F	Пераскева	Прасковья		legacy	
+F	Праскева	Прасковья		legacy	
+F	Праскевия	Прасковья		legacy	
+F	Праскевья	Прасковья		legacy	
+F	Праскова	Прасковья		legacy	
+F	Прасковия	Прасковья		legacy	
+F	Прасковья			legacy	
+F	Саламанида	Салманида		legacy	
+F	Саломонида	Салманида|Соломонида	Салманида	legacy	
+F	Самналида	Салманида		legacy	
+F	Севастиана	Севастьяна		legacy	
+F	Секлетея	Синклитикия		legacy	
+F	Сигклитикия	Синклитикия		legacy	
+F	Сиклитикия	Синклитикия		legacy	
+F	Синклитикия			legacy	
+F	Сосанна	Сусанна		legacy	
+F	София	Софья		legacy	
+F	Софья			legacy	
+F	Степанида			legacy	
+F	Стефанида	Степанида		legacy	
+F	Стефаница			ignore	
+F	Стипанида	Степанида		legacy	
+F	Сусанна			legacy	
+F	Татиана	Татьяна		legacy	
+F	Татияна	Татьяна		legacy	
+F	Татьяна			legacy	
+F	Трофима			legacy	
+F	Устина	Юстина		legacy	
+F	Устиния	Юстина		legacy	
+F	Устинья	Юстина		legacy	
+F	Фалина			ignore	
+F	Феодория			ignore	
+F	Феония			legacy	
+F	Фома	Фомаида		legacy	
+F	Фомина			ignore	
+F	Юлиания			legacy	
+F	Юлия			legacy	
+F	Юния			legacy	
+F	Юстина			legacy	
+M	Авакум	Аввакум		legacy	
+M	Авдей			legacy	
+M	Авдий	Авдей		legacy	
+M	Аврамий	Авраам		legacy	
+M	Аврас	Авраам		legacy	
+M	Авсей			legacy	
+M	Агапий	Агапит		legacy	
+M	Аглаий	Аглай		legacy	
+M	Аглай			legacy	
+M	Адреян	Адриан		legacy	
+M	Адриян	Адриан		legacy	
+M	Адроник	Андроник		legacy	
+M	Аетий	Аэтий		legacy	
+M	Акилла	Акила		legacy	
+M	Аким	Иаким		legacy	
+M	Алвиан	Альвиан		legacy	
+M	Алексеи	Алексей		legacy	
+M	Алексей			legacy	
+M	Алексий	Алексей		legacy	
+M	Алип	Алипий		legacy	
+M	Алфер	Елеферий		legacy	
+M	Алфий	Альфий		legacy	
+M	Алфёр	Елеферий		legacy	
+M	Альфий			legacy	
+M	Амбросий	Амвросий		legacy	
+M	Амвросим	Амвросий		legacy	
+M	Ананей	Ананий		legacy	
+M	Ананий			legacy	
+M	Анания	Ананий		legacy	
+M	Ананья	Ананий		legacy	
+M	Ананя	Ананий		legacy	
+M	Андреван	Адриан		legacy	
+M	Аника	Аникий		legacy	
+M	Аникей	Аникий		legacy	
+M	Аникий			legacy	
+M	Анисий			legacy	
+M	Анофей	Онуфрий		legacy	
+M	Антип			legacy	
+M	Антипа	Антип		legacy	
+M	Антипий	Антип		legacy	
+M	Антипп	Антип		legacy	
+M	Антифей	Антип		legacy	
+M	Антон			legacy	
+M	Антоний	Антон		legacy	
+M	Анурей	Анурий		legacy	
+M	Анурий			legacy	
+M	Арефа	Арефий		legacy	
+M	Арефий			legacy	
+M	Арсентей	Арсентий		legacy	
+M	Артам			ignore	
+M	Артамон			legacy	
+M	Артема	Артемий		legacy	
+M	Артемон	Артамон		legacy	
+M	Артём	Артемий		legacy	
+M	Арьсений	Арсений		legacy	
+M	Асаф	Иосаф		legacy	
+M	Асафий	Иосаф		legacy	
+M	Асигкрит	Асинкрит		legacy	
+M	Асинкрит			legacy	
+M	Астап	Остап		legacy	
+M	Аферьян	Аверкий		legacy	
+M	Афон	Афоний		legacy	
+M	Афоний			legacy	
+M	Афросим	Амвросий		legacy	
+M	Аффоний	Афоний		legacy	
+M	Ахиллий	Ахилл		legacy	
+M	Ахрем	Ефрем		legacy	
+M	Аэтий			legacy	
+M	Багдан	Богдан		legacy	
+M	Варсонофей	Варсонофий		legacy	
+M	Варсонофой	Варсонофий		legacy	
+M	Ват			legacy	
+M	Вата	Ват		legacy	
+M	Ведоникта	Венедикт		legacy	
+M	Верьян	Аверкий		legacy	
+M	Викторин	Виктор		legacy	
+M	Влас			legacy	
+M	Власий	Влас		legacy	
+M	Вониватий			legacy	
+M	Ворфоломей	Варфоломей		legacy	
+M	Гаий	Гай		legacy	
+M	Гардей	Гордей		legacy	
+M	Гарней	Гордей		legacy	
+M	Гермократ			legacy	
+M	Гордей			legacy	
+M	Гордий	Гордей		legacy	
+M	Дамиан	Демьян		legacy	
+M	Дей			legacy	
+M	Дементей	Дементий		legacy	
+M	Дементий			legacy	
+M	Демиан	Демьян		legacy	
+M	Демид			legacy	
+M	Демит	Демид		legacy	
+M	Демьян			legacy	
+M	Денис			legacy	
+M	Денисий	Денис		legacy	
+M	Деомид	Демид		legacy	
+M	Деонис	Денис		legacy	
+M	Деонисий	Денис		legacy	
+M	Дий	Дей		legacy	
+M	Димитрий	Дмитрий		legacy	
+M	Диомид	Демид		legacy	
+M	Дионис	Денис		legacy	
+M	Дионисий	Денис		legacy	
+M	Дмитрей	Дмитрий		legacy	
+M	Дмитрий			legacy	
+M	Додо	Додон		legacy	
+M	Додон			legacy	
+M	Дометий	Дементий		legacy	
+M	Дружина			legacy	
+M	Евдаким	Евдоким		legacy	
+M	Евиласий	Евласий		legacy	
+M	Евлапий	Евлампий		legacy	
+M	Евласий			legacy	
+M	Евпал	Евпл		legacy	
+M	Евпатий			legacy	
+M	Еврем	Ефрем		legacy	
+M	Евсегней	Евстигней		legacy	
+M	Евсигней	Евстигней		legacy	
+M	Евсигний	Евстигней		legacy	
+M	Евстафей	Евстафий		legacy	
+M	Евстигней			legacy	
+M	Евстихий	Евтихий		legacy	
+M	Евстрат			legacy	
+M	Евстратей	Евстрат		legacy	
+M	Евстратий	Евстрат		legacy	
+M	Евтей			legacy	
+M	Евтих	Евтихий		legacy	
+M	Евфим	Ефим		legacy	
+M	Евфимий	Ефим		legacy	
+M	Евфрасий	Ефрасий		legacy	
+M	Евфрем	Ефрем		legacy	
+M	Евфросин	Ефросин		legacy	
+M	Егор	Георгий	Егор	legacy	
+M	Егуп			legacy	
+M	Еким	Иаким		legacy	
+M	Елеазар	Елизар		legacy	
+M	Елевферий	Елеферий		legacy	
+M	Елеферий			legacy	
+M	Елизар			legacy	
+M	Елис			legacy	
+M	Елиссей	Елисей		legacy	
+M	Елистр	Евстрат		legacy	
+M	Елистрат	Евстрат		legacy	
+M	Еллий	Эллий		legacy	
+M	Елфим	Ефим		legacy	
+M	Емануил	Эммануил		legacy	
+M	Еммануил	Эммануил		legacy	
+M	Епиктет	Эпиктет		legacy	
+M	Епифан			legacy	
+M	Епифаний	Епифан		legacy	
+M	Еразм	Эразм		legacy	
+M	Ерас	Эраст		legacy	
+M	Ераст	Эраст		legacy	
+M	Еремей			legacy	
+M	Еремия	Еремей		legacy	
+M	Ермила	Ермил		legacy	
+M	Ермилай	Ермолай		legacy	
+M	Ермократ	Гермократ		legacy	
+M	Ермол	Ермолай		editor	краткая форма Ермолая, не Ермак (решение владельца 10.11.2026)
+M	Ермоний			legacy	
+M	Ерос	Эрос		legacy	
+M	Ерофей			legacy	
+M	Есаф	Иосаф		legacy	
+M	Ефим			legacy	
+M	Ефимий	Ефим		legacy	
+M	Ефрасий			legacy	
+M	Ефросин			legacy	
+M	Ефсигней	Евстигней		legacy	
+M	Ефсигний	Евстигней		legacy	
+M	Ефтей	Евтей		legacy	
+M	Ехрем	Ефрем		legacy	
+M	Ждан			legacy	
+M	Захар			legacy	
+M	Захарий	Захар		legacy	
+M	Захария	Захар		legacy	
+M	Зенон			legacy	
+M	Зинон	Зенон		legacy	
+M	Зот	Изот		legacy	
+M	Зотей			legacy	
+M	Зотик	Изот		legacy	
+M	Иаакий			ignore	
+M	Иаким			legacy	
+M	Иаков	Яков		legacy	
+M	Ианикит	Аникита		legacy	
+M	Иасон	Ясон		legacy	
+M	Иван			legacy	
+M	Ивлей	Юлий		legacy	
+M	Ивлий	Юлий		legacy	
+M	Иевлей	Юлий		legacy	
+M	Иевлий	Юлий		legacy	
+M	Иеремия	Еремей		legacy	
+M	Иерофей	Ерофей		legacy	
+M	Измаил			legacy	
+M	Изот			legacy	
+M	Илия	Илья		legacy	
+M	Илья			legacy	
+M	Иоаким	Иаким		legacy	
+M	Иоан	Иван		legacy	
+M	Иоанн	Иван		legacy	
+M	Иоанникий	Аникий		legacy	
+M	Иоасаф	Иосаф		legacy	
+M	Иосаф			legacy	
+M	Иполит	Ипполит		legacy	
+M	Исакий	Исаакий		legacy	
+M	Исмаил	Измаил		legacy	
+M	Иувеналий	Ювеналий		legacy	
+M	Иувентин	Ювентин		legacy	
+M	Иулиан	Юлиан		legacy	
+M	Иулий	Юлий		legacy	
+M	Иуст	Юст		legacy	
+M	Иустин	Юстин		legacy	
+M	Иустиниан	Юстиниан		legacy	
+M	Ияков	Яков		legacy	
+M	Казей			legacy	
+M	Казма	Кузьма		legacy	
+M	Казьма	Кузьма		legacy	
+M	Калистрат	Каллистрат		legacy	
+M	Кандрат	Кондратий		legacy	
+M	Кандратей	Кондратий		legacy	
+M	Кандратий	Кондратий		legacy	
+M	Канстентин	Константин		legacy	
+M	Касма	Кузьма		legacy	
+M	Кассиан	Касьян		legacy	
+M	Касьма	Кузьма		legacy	
+M	Касьян			legacy	
+M	Кириан			legacy	
+M	Кириллий	Кирилл		legacy	
+M	Кирьян	Кириан		legacy	
+M	Китай			legacy	
+M	Ковел			ignore	
+M	Кодрат	Кондратий		legacy	
+M	Кодратий	Кондратий		legacy	
+M	Козей	Казей		legacy	
+M	Козма	Кузьма		legacy	
+M	Козьма	Кузьма		legacy	
+M	Козяй	Казей		legacy	
+M	Коинт	Квинт		legacy	
+M	Коленник	Калинник		legacy	
+M	Кондрат	Кондратий		legacy	
+M	Кондратей	Кондратий		legacy	
+M	Кондрати	Кондратий		legacy	
+M	Кондратий			legacy	
+M	Кондретей	Кондратий		legacy	
+M	Константан	Константин		legacy	
+M	Констянтин	Константин		legacy	
+M	Контентин	Константин		legacy	
+M	Копреян	Киприан		legacy	
+M	Косма	Кузьма		legacy	
+M	Костенитин	Константин		legacy	
+M	Костма	Кузьма		legacy	
+M	Косьма	Кузьма		legacy	
+M	Ксенафонт	Ксенофонт		legacy	
+M	Кузма	Кузьма		legacy	
+M	Кузьма			legacy	
+M	Куприан	Киприан		legacy	
+M	Лаврен	Лаврентий		legacy	
+M	Левантий	Леонтий		legacy	
+M	Лимний	Лимней		legacy	
+M	Липатий	Ипатий		legacy	
+M	Листрат	Евстрат		legacy	
+M	Логвин	Лонгин		legacy	
+M	Логгин	Лонгин		legacy	
+M	Логин	Лонгин		legacy	
+M	Локтион	Галактион		legacy	
+M	Лонгин			legacy	
+M	Лукан	Лукьян		legacy	
+M	Лукиан	Лукьян		legacy	
+M	Лукиян	Лукьян		legacy	
+M	Лукьян			legacy	
+M	Луп			legacy	
+M	Лупп	Луп		legacy	
+M	Любим			legacy	
+M	Макар			legacy	
+M	Макарий	Макар		legacy	
+M	Макей	Мокей		legacy	
+M	Макс	Максим		legacy	
+M	Малафей	Малахий		legacy	
+M	Малахий			legacy	
+M	Малахия	Малахий		legacy	
+M	Малей			legacy	
+M	Мамон			legacy	
+M	Маркей			legacy	
+M	Марко	Марк		legacy	
+M	Март			legacy	
+M	Матвей			legacy	
+M	Матфей	Матвей		legacy	
+M	Матфий	Матвей		legacy	
+M	Матьфей	Матвей		legacy	
+M	Мафей	Матвей		legacy	
+M	Мелентий	Мелетий	Мелетий	legacy	
+M	Микула	Николай		legacy	
+M	Микэль			ignore	
+M	Милован			legacy	
+M	Миней			legacy	
+M	Митрей	Дмитрий		legacy	
+M	Митрий	Дмитрий		legacy	
+M	Мокар	Макар		legacy	
+M	Мокей			legacy	
+M	Мокий	Мокей		legacy	
+M	Назар			legacy	
+M	Назарий	Назар		legacy	
+M	Насон			legacy	
+M	Настас	Анастасий		legacy	
+M	Настасий	Анастасий		legacy	
+M	Натолий	Анатолий		legacy	
+M	Нефед			editor	свой, не Мефодий (решение владельца 10.11.2026)
+M	Никан	Никон		legacy	
+M	Никола	Николай		legacy	
+M	Никонор	Никанор		legacy	
+M	Нирс			legacy	
+M	Нирса	Нирс		legacy	
+M	Нистрат	Никострат		legacy	
+M	Нуштай	Нуштанза		legacy	
+M	Нуштанза			legacy	
+M	Орефий	Арефий		legacy	
+M	Остап			legacy	
+M	Пагкратий	Панкратий		legacy	
+M	Пантилей	Пантелеимон		legacy	
+M	Панфер	Панферий		legacy	
+M	Панферий			legacy	
+M	Панфутий	Пафнутий		legacy	
+M	Парфен	Парфён		legacy	
+M	Парфил	Перфил		legacy	
+M	Парфён	Парфений	Парфён	legacy	
+M	Парьфен	Парфён		legacy	
+M	Патап	Потап		legacy	
+M	Патапий	Потап		legacy	
+M	Пафом	Пахом		legacy	
+M	Пахом			legacy	
+M	Пахомий	Пахом		legacy	
+M	Перфен	Перфил		legacy	
+M	Перфил			legacy	
+M	Перфилий	Перфил		legacy	
+M	Перфирий	Порфирий		legacy	
+M	Порфир	Порфирий		legacy	
+M	Потап			legacy	
+M	Савастиян	Севастьян		legacy	
+M	Савастьян	Севастьян		legacy	
+M	Саватий	Савватий		legacy	
+M	Савел	Савелий		legacy	
+M	Савелей	Савелий		legacy	
+M	Савелий			legacy	
+M	Савостиан	Севастьян		legacy	
+M	Савостиян	Севастьян		legacy	
+M	Савостьян	Севастьян		legacy	
+M	Саврон	Софрон		legacy	
+M	Савёл	Савелий		legacy	
+M	Сазан			legacy	
+M	Сампсон	Самсон		legacy	
+M	Сапрон	Софрон		legacy	
+M	Сарон			legacy	
+M	Сафон	Софоний		legacy	
+M	Сафран	Софрон		legacy	
+M	Сафрон	Софрон		legacy	
+M	Сафроний	Софрон		legacy	
+M	Свирид	Спиридон		legacy	
+M	Севастиан	Севастьян		legacy	
+M	Севастиян	Севастьян		legacy	
+M	Севастьян			legacy	
+M	Севериан	Северьян		legacy	
+M	Северьян			legacy	
+M	Севостьян	Севастьян		legacy	
+M	Селиван			legacy	
+M	Селиверст	Сильвестр		legacy	
+M	Селивёрст	Сильвестр		legacy	
+M	Селифан	Селиван		legacy	
+M	Семен	Семён	Семен	legacy	
+M	Семеон	Семен		legacy	
+M	Семион	Семен		legacy	
+M	Семён	Семен	Семён	legacy	
+M	Сергей			legacy	
+M	Сергий	Сергей		legacy	
+M	Серьгей	Сергей		legacy	
+M	Сигней	Евстигней		legacy	
+M	Силвестр	Сильвестр		legacy	
+M	Силиван	Селиван		legacy	
+M	Силиватр	Сильвестр		legacy	
+M	Силиверст	Сильвестр		legacy	
+M	Сильван	Силван	Сильван	legacy	
+M	Сильверст	Сильвестр		legacy	
+M	Сильверстр	Сильвестр		legacy	
+M	Сильвестр			legacy	
+M	Сильвёрст	Сильвестр		legacy	
+M	Симеон	Семен		legacy	
+M	Симион	Семен		legacy	
+M	Сопрон	Софрон		legacy	
+M	Софон	Софоний		legacy	
+M	Софоний			legacy	
+M	Софония	Софоний		legacy	
+M	Софрон			legacy	
+M	Софроний	Софрон		legacy	
+M	Старатон			legacy	
+M	Старотон	Стратон		legacy	
+M	Степан			legacy	
+M	Стефан	Степан		legacy	
+M	Стротоник	Стратоник		legacy	
+M	Тарас			legacy	
+M	Тарасий	Тарас		legacy	
+M	Тихан	Тихон		legacy	
+M	Трафил	Трифилий		legacy	
+M	Трифил	Трифилий		legacy	
+M	Трифилий			legacy	
+M	Трифиллий	Трифилий		legacy	
+M	Уар	Увар		legacy	
+M	Увар			legacy	
+M	Улиан	Юлиан		legacy	
+M	Улий	Юлий		legacy	
+M	Ульян	Юлиан		legacy	
+M	Устим	Юстин		legacy	
+M	Устин	Юстин		legacy	
+M	Фаламей	Варфоломей		legacy	
+M	Федар	Федор		legacy	
+M	Федор			legacy	
+M	Федос	Феодосий		legacy	
+M	Федот			legacy	
+M	Федотий	Федот		legacy	
+M	Феклис	Феоктист		editor	Журавкино 1821 л. 471 № 21 «Феклиса Климова» (вычитка владельца 10.11.2026)
+M	Фемистокл			legacy	
+M	Фемистоклей	Фемистокл		legacy	
+M	Феоген	Афиноген		legacy	
+M	Феодор	Федор		legacy	
+M	Феодот	Федот		legacy	
+M	Феопемпт			legacy	
+M	Феопент	Феопемпт	Феопент	legacy	
+M	Феохтист			ignore	
+M	Фетист	Феоктист		legacy	
+M	Филка	Филипп		legacy	
+M	Фиоктист	Феоктист		legacy	
+M	Фокий	Фока		legacy	
+M	Фоким	Иаким		legacy	
+M	Фрал	Флор		legacy	
+M	Фёдор	Федор		legacy	
+M	Харалампий	Харлампий		legacy	
+M	Харлам	Харлампий		legacy	
+M	Харламий	Харлампий		legacy	
+M	Харламп	Харлампий		legacy	
+M	Харлампий			legacy	
+M	Христафор	Христофор		legacy	
+M	Эллий			legacy	
+M	Эммануил			legacy	
+M	Эпиктет			legacy	
+M	Эраст			legacy	
+M	Ювентин			legacy	
+M	Юлиан			legacy	
+M	Юлий			legacy	
+M	Юрий			legacy	
+M	Юст			legacy	
+M	Юстин			legacy	
+M	Юстиниан			legacy	
+M	Яким	Иаким		legacy	
+M	Яков			legacy	
+M	Ясон			legacy	

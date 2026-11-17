@@ -1,0 +1,19 @@
+# Рабочая область verso: где лежат данные и с какими плагинами работать (verso:docs/workspace.md).
+schema = 7
+plugins = ["ru"]
+villages = ["Журавкино"]
+
+[names]        # словарь имён: база verso-ru и слой корпуса над ней
+base = "ru"
+layers = ["corpus/names"]
+writable = "corpus/names"
+
+[translit]     # профили транслитерации (verso translit show)
+address = "ru-v1"
+display = "ru-v2"
+
+[corpus]       # места и прочие таблицы корпуса
+dir = "corpus"
+
+[i18n]
+locale = "ru"
