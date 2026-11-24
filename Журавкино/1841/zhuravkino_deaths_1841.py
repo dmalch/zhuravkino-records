@@ -190,7 +190,7 @@ zhuravkino_deaths_1841 = death_records(
                              cause_of_death=PLEURISY),
                        ),
           ),
-    *page("168",
+    *page("169",
           *death_month(Month.NOVEMBER,
                        death(24, Gender.FEMALE, 4, 5,
                              deceased=person("Евдокія", status=KAZENNYJ_PEASANT_DAUGHTER), age=3,

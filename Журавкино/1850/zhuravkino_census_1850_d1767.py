@@ -332,7 +332,7 @@ census = census_records(
                     member(14, person("Настасья", "Федорова"), CensusRole.WIFE, ref_member=5, age=20),
                     member(15, person("Фекла", "Савельева"), CensusRole.MOTHER, ref_member=8, age=54),
                     member(16, person("Авдотья", "Евдокимова"), CensusRole.DAUGHTER, ref_member=15, age=15, parent_member=20),
-                    member(17, person("Анастасия", "Меркуриева"), CensusRole.WIFE, ref_member=8, age=40, comment="Наталья Меркулова"),
+                    member(17, person("Настасья", "Меркулова"), CensusRole.WIFE, ref_member=8, age=40),
                     member(18, person("Прасковья"), CensusRole.DAUGHTER, ref_member=8, age=10),
                     member(19, person("Никифор", "Трофимов"), CensusRole.SON, age="?", hidden=True, comment="Отсутствует в РС 1850; персона добавлена вручную по другим материалам."),
                     member(20, person("Евдоким", "Трофимов"), None, ref_member=15, age="?",

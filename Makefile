@@ -3,13 +3,14 @@ PY := .venv/bin/python
 VERSO := $(PY) -m verso.core.cli
 VILLAGE := Журавкино
 
-.PHONY: help bootstrap lint records check
+.PHONY: help bootstrap lint records check site
 
 help:
 	@echo "make bootstrap  — .venv и verso"
 	@echo "make lint       — линтер DSL (verso dsllint)"
 	@echo "make records    — записи в JSON (verso export-records) → records/"
 	@echo "make check      — lint и records"
+	@echo "make site       — сайт села (verso site) → _site/"
 
 bootstrap:
 	@if [ -x $(PY) ]; then echo "==> .venv уже есть"; \
@@ -25,3 +26,11 @@ records:
 	$(VERSO) export-records --village "$(VILLAGE)" --strict
 
 check: lint records
+
+site:
+	rm -rf _site
+	$(VERSO) site --village "$(VILLAGE)" --out _site --strict \
+		--title="Журавкино и Авдалово" \
+		--repo-url "https://github.com/dmalch/zhuravkino-records" --site-url "https://dmalch.github.io/zhuravkino-records/" \
+		--license "CC BY 4.0" --license-url "https://creativecommons.org/licenses/by/4.0/" \
+		--revision "$$(git rev-parse --short HEAD 2>/dev/null || echo local)"

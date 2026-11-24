@@ -432,7 +432,7 @@ zhuravkino_births_1841 = birth_records(
                              god_parent2=person("Ирина", "Агафонова", "Тишкина")),
                        ),
           ),
-    *page("157",
+    *page("151",
           *birth_month(Month.SEPTEMBER,
                        birth(31, Gender.MALE, 22, 25,
                              child=person("Григорій"),
