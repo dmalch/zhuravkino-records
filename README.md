@@ -157,7 +157,7 @@
 Нужны Python 3.14 и, лучше, [uv](https://docs.astral.sh/uv/).
 
 ```bash
-make bootstrap   # .venv и verso v0.1.49
+make bootstrap   # .venv и verso v0.1.51
 make check       # линтер DSL и выгрузка записей в JSON (records/)
 ```
 
