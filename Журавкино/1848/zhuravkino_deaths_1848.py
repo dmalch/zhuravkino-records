@@ -11,7 +11,7 @@ from verso.ru.dsl.causes_of_death import (COLD, CONSUMPTION, DIARRHEA, DROPSY, H
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_DAUGHTER, KAZENNYJ_PEASANT_FEMALE,
                                    KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_SON,
                                    KAZENNYJ_PEASANT_WIDOW, MESHCHANIN, MESHCHANIN_SON, PEASANT_MALE,
-                                   SOLDIER_SON, SOLDIER_WIFE)
+                                   SOLDIER, SOLDIER_SON, SOLDIER_SPOUSE, SOLDIER_WIFE)
 
 zhuravkino_deaths_1848 = death_records(
     "?", "?", "?", "?", "Журавкино", "Николаевская",
@@ -124,8 +124,8 @@ zhuravkino_deaths_1848 = death_records(
           ),
     *page("573об",
                        death(10, Gender.FEMALE, 19, 20, reviewed=False,
-                             deceased=person("Анастасія", "Егорова", status="жена военнослужащего", residence=None, comment="«служащего полевой(?) части военного Петра Степанова(?) жена»; читается неуверенно"), age=37,
-                             relatives=[relative(person("Петръ", "Степановъ", status="военнослужащий", residence=None, comment="читается неуверенно"), Relationship.HUSBAND)],
+                             deceased=person("Анастасія", "Егорова", status=SOLDIER_SPOUSE, residence=None, comment="«служащего полевой(?) части военного Петра Степанова(?) жена»; читается неуверенно"), age=37,
+                             relatives=[relative(person("Петръ", "Степановъ", status=SOLDIER, residence=None, comment="военнослужащий; читается неуверенно"), Relationship.HUSBAND)],
                              cause_of_death="холера"),
                        death(11, Gender.FEMALE, 21, 22, reviewed=False,
                              deceased=person("Настасія", "Антонова"), age=55,
@@ -215,7 +215,7 @@ zhuravkino_deaths_1848 = death_records(
                              comment="отец Татіаны (ч. 1, ж8, 18.01.1848)"),
                        death(24, Gender.MALE, 13, 14, reviewed=False,
                              deceased=person("Павелъ"), age=2,
-                             relatives=[relative(person("Петръ", "Степановъ", "Аникеевъ", status="военнослужащий", residence=None, comment="«служащего полевой(?) части»; фамилия читается неуверенно"), Relationship.FATHER)],
+                             relatives=[relative(person("Петръ", "Степановъ", "Аникеевъ", status=SOLDIER, residence=None, comment="военнослужащий; «служащего полевой(?) части»; фамилия читается неуверенно"), Relationship.FATHER)],
                              cause_of_death=DIARRHEA),
                        death(25, Gender.MALE, 14, 15, reviewed=False,
                              deceased=person("Максимъ", status=KAZENNYJ_PEASANT_SON), age=1,

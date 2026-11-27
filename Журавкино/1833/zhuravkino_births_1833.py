@@ -68,7 +68,7 @@ zhuravkino_births_1833 = birth_records(
                              father=person("Иван", "Семенов", residence="Кадом", status=MESHCHANIN),
                              mother=person("Васса", "Владимирова", status="законная жена мещанина"),
                              god_parent1=person("Гавриил", "Фомин", residence="Спасск", status=MESHCHANIN),
-                             god_parent2=person("Пелагея", "Семенова", residence="Кадом", status="жена отставного унтер-офицера")),
+                             god_parent2=person("Пелагея", "Семенова", residence="Кадом", status=SOLDIER_SPOUSE, comment="жена отставного унтер-офицера")),
                        birth(6, Gender.MALE, 16, 19,
                              child=person("Тарас"),
                              father=person("Иван", "Ильин", last_name_orig="Чапаев", last_name_modern_orth="Чепаев"),

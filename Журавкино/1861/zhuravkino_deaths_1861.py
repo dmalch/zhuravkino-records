@@ -14,7 +14,7 @@ from verso.ru.dsl.causes_of_death import (CONSUMPTION, DIARRHEA, FEVER, HEADACHE
 from verso.ru.dsl.statuses import (DEACON, DEACON_DAUGHTER, KAZENNYJ_PEASANT_DAUGHTER,
                                    KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MALE,
                                    KAZENNYJ_PEASANT_SON, KAZENNYJ_PEASANT_WIDOW, PRIVATE_SOLDIER,
-                                   SOLDIER_DAUGHTER, SOLDIER_SON, SOLDIER_WIFE)
+                                   RETIRED_SOLDIER, SOLDIER_DAUGHTER, SOLDIER_SON, SOLDIER_WIFE)
 
 zhuravkino_deaths_1861 = death_records(
     "ЦГАРМ", "57", "6", "450", "Журавкино", "Николаевская",
@@ -109,8 +109,8 @@ zhuravkino_deaths_1861 = death_records(
                              relatives=[relative(person("Антонъ", "Михайловъ", "Сяминъ", comment="фамилия читается неуверенно"), Relationship.HUSBAND)],
                              cause_of_death=CONSUMPTION),
                        death(9, Gender.FEMALE, 10, 11, reviewed=False,
-                             deceased=person("Матрена", status="дочь отставного рядового", residence=None), age="полгода",
-                             relatives=[relative(person("Ѳедотъ", "Агафоновъ", status="отставной рядовой", residence=None, comment="«отставнаго рядоваго»"), Relationship.FATHER)],
+                             deceased=person("Матрена", status=SOLDIER_DAUGHTER, comment="дочь отставного рядового", residence=None), age="полгода",
+                             relatives=[relative(person("Ѳедотъ", "Агафоновъ", status=RETIRED_SOLDIER, residence=None, comment="«отставнаго рядоваго»"), Relationship.FATHER)],
                              cause_of_death=PLEURISY),
                        death(10, Gender.MALE, 20, 21, reviewed=False,
                              deceased=person("Петръ", status=KUGUSHEV_IV_PEASANT_SON, residence="Авдалово"), age=1,

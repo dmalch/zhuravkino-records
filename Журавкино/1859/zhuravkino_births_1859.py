@@ -1,7 +1,9 @@
 from corpus.statuses import (ENGALYCHEV_NA_LEGAL_WIFE, ENGALYCHEV_NA_PEASANT_FEMALE, ENGALYCHEV_NA_PEASANT_MALE, ISHEEV_ET_LEGAL_WIFE, ISHEEV_ET_PEASANT_FEMALE, ISHEEV_ET_PEASANT_MALE, KUGUSHEV_IV_LEGAL_WIFE, KUGUSHEV_IV_PEASANT_FEMALE, KUGUSHEV_IV_PEASANT_MALE, SLEPTSOV_AG_DVOROVY, SLEPTSOV_AG_DVOROVY_LEGAL_WIFE, SLEPTSOV_AG_DVOROVY_SON, SLEPTSOV_AG_LEGAL_WIFE, SLEPTSOV_AG_PEASANT_FEMALE, SLEPTSOV_AG_PEASANT_MAIDEN, SLEPTSOV_AG_PEASANT_MALE, SLEPTSOV_ED_LEGAL_WIFE, SLEPTSOV_ED_PEASANT_MALE)
 from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, birth, birth_month,
                           birth_records, page, person, relative)
-from verso.ru.dsl.statuses import (DYACHOK, KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_WIDOW, MESHCHANIN, PRIEST, SOLDIER_WIFE)
+from verso.ru.dsl.statuses import (DYACHOK, KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MALE,
+                                   KAZENNYJ_PEASANT_WIDOW, MESHCHANIN, PRIEST, SOLDIER,
+                                   SOLDIER_WIFE)
 
 zhuravkino_births_1859 = birth_records(
     "ЦГАРМ", "57", "1", "434", "Журавкино", "Николаевская",
@@ -286,7 +288,7 @@ zhuravkino_births_1859 = birth_records(
                              god_parent2=person("Васса", "Никитина", status=ENGALYCHEV_NA_PEASANT_FEMALE, residence="Авдалово")),
                        birth(20, Gender.FEMALE, 4, 7, reviewed=False,
                              child=person("Акилина"),
-                             father=person("Тимоѳей", "Перфиловъ", status="уволенный в бессрочный отпуск рядовой"),
+                             father=person("Тимоѳей", "Перфиловъ", status=SOLDIER, comment="уволенный в бессрочный отпуск рядовой"),
                              mother=person("Агафія", "Андреева", status=SOLDIER_WIFE),
                              god_parent1=person("Варѳоломей", "Елисѣевъ", "Шумбасовъ"),
                              god_parent2=person("Васса", "Константинова", "Челомеева", comment="в книге «Челомпеева»(?)")),
@@ -423,7 +425,7 @@ zhuravkino_births_1859 = birth_records(
                              god_parent2=person("Татіана", "Петрова")),
                        birth(29, Gender.MALE, 15, 20, reviewed=False,
                              child=person("Димитрій"),
-                             father=person("Павелъ", "Ивановъ", "Сямакинъ", status="уволенный в бессрочный отпуск рядовой"),
+                             father=person("Павелъ", "Ивановъ", "Сямакинъ", status=SOLDIER, comment="уволенный в бессрочный отпуск рядовой"),
                              mother=person("Акилина", "Димитріева", status=SOLDIER_WIFE),
                              god_parent1=person("Ѳеодоръ", "Димитріевъ", "Шеринъ", comment="в книге «Шеровъ»(?)"),
                              god_parent2=person("Пелагія", "Иванова", "Сямакина")),

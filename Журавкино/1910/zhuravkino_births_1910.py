@@ -1,7 +1,7 @@
 from verso.ru.dsl import (Gender, Month, RecordDefaults, birth, birth_month, birth_records, page,
                           person)
 from verso.ru.dsl.statuses import (DEACON, MAIDEN, MESHCHANIN, MESHCHANIN_DAUGHTER, MESHCHANIN_WIFE,
-                                   PEASANT_FEMALE, PEASANT_MALE, PRIEST, SOLDIER_WIFE)
+                                   PEASANT_FEMALE, PEASANT_MALE, PRIEST, SOLDIER, SOLDIER_WIFE)
 
 # Журавкино 1910 — ЦГАРМ 57-8-87, ч. 1 «о родившихся», лл. 136об–176об (Photos «1910», pk 1173).
 # Листы — по карандашной фоліаціи въ углу: кадры 2–23 = лл. 136об–157об, кадры 24–25 — одинъ
@@ -497,7 +497,7 @@ zhuravkino_births_1910 = birth_records(
                              comment="близнецы; см. № 23"),
                        birth(43, Gender.FEMALE, 19, 21, reviewed=False,
                              child=person("Александра"),
-                             father=person("Михаилъ", "Максимовъ", last_name_orig="Якушкинъ", status="состоящий на военной службе"),
+                             father=person("Михаилъ", "Максимовъ", last_name_orig="Якушкинъ", status=SOLDIER, comment="состоящий на военной службе"),
                              mother=person("Домна", "Павлова"),
                              god_parent1=person("Петръ", "Алексѣевъ", last_name_orig="Остаповъ"),
                              god_parent2=person("Наталія", "Максимова", last_name_orig="Якушкина", status=MAIDEN)),

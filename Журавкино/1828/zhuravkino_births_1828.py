@@ -5,7 +5,8 @@ from corpus.statuses import (ENGALYCHEV_NA_PEASANT_FEMALE, ENGALYCHEV_NA_PEASANT
 from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, birth, birth_month,
                           birth_records, page, person, relative)
 from verso.ru.dsl.statuses import (DEACON, DYACHIKHA_WIDOW, DYACHOK, LANDLORD_FEMALE, PRIEST,
-                                   SEXTON, SOLDIER_SPOUSE, YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE)
+                                   SEXTON, SOLDIER_SPOUSE, UNTER_OFFICER, YASAK_PEASANT_FEMALE,
+                                   YASAK_PEASANT_MALE)
 
 zhuravkino_births_1828 = birth_records(
     "ЦГАРМ", "57", "1", "400", "Журавкино", "Николая Чудотворца",
@@ -282,7 +283,7 @@ zhuravkino_births_1828 = birth_records(
                        birth(53, Gender.MALE, 18, 25,
                              child=person("Меркул"),
                              father=person("Алексей", "Андреев", residence="Авдалово", status=SLEPTSOV_AT_PEASANT_MALE),
-                             god_parent1=person("Семен", "Климов", status="отставной унтер-офицер")),
+                             god_parent1=person("Семен", "Климов", status=UNTER_OFFICER, comment="отставной унтер-офицер")),
                        ),
           *birth_month(Month.DECEMBER,
                        birth(54, Gender.FEMALE, 6, 10,

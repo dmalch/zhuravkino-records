@@ -4,7 +4,7 @@ from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, death, de
 from verso.ru.dsl.causes_of_death import (CHILDBIRTH, COLIC, CONSUMPTION, COUGH, DIARRHEA, FEVER,
                                           HEADACHE, NATURAL)
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MALE,
-                                   PROPRIETOR_PEASANT_MALE, RETIRED_SOLDIER, SOLDIER_WIFE,
+                                   PROPRIETOR_PEASANT_MALE, RETIRED_SOLDIER, SOLDIER, SOLDIER_WIFE,
                                    TEMP_OBLIGED_PEASANT_MALE)
 
 zhuravkino_deaths_1866 = death_records(
@@ -53,7 +53,7 @@ zhuravkino_deaths_1866 = death_records(
                        death(2, Gender.MALE, 1, 3, reviewed=False,
                              deceased=person("Григорій", "Денисовъ", status=TEMP_OBLIGED_PEASANT_MALE), age=67),
                        death(3, Gender.MALE, 5, 7, reviewed=False,
-                             deceased=person("Іосифъ", "Козьминъ", "Атаевъ", status="уволенный в бессрочный отпуск рядовой", comment="«уволенный во временный отпускъ рядовой»"), age=30,
+                             deceased=person("Іосифъ", "Козьминъ", "Атаевъ", status=SOLDIER, comment="«уволенный во временный отпускъ рядовой»"), age=30,
                              cause_of_death=FEVER,
                              comment="день смерти читается неуверенно"),
                        death(4, Gender.MALE, 20, 21, reviewed=False,

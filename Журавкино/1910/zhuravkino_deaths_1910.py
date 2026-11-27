@@ -3,7 +3,7 @@ from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, death, de
 from verso.ru.dsl.causes_of_death import (CHILDBIRTH, CONSUMPTION, DIARRHEA, DROPSY, FEVER, NATURAL,
                                           PARALYSIS, PNEUMONIA, SCARLATINA, TYPHUS, WEAKNESS)
 from verso.ru.dsl.statuses import (MESHCHANIN, MESHCHANIN_SON, MESHCHANIN_WIDOW, MESHCHANIN_WIFE,
-                                   PEASANT_FEMALE, PEASANT_MALE, PEASANT_WIDOW)
+                                   PEASANT_FEMALE, PEASANT_MALE, PEASANT_WIDOW, SOLDIER)
 
 # Журавкино 1910 — ЦГАРМ 57-8-87, ч. 3 «объ умершихъ», лл. 191об–209об (Photos «1910», pk 1173,
 # кадры 54–72; кадръ k = л. (k+137)об, по фоліаціи не сверено). Прочитано 06.11.2026 сплошь,
@@ -117,7 +117,7 @@ zhuravkino_deaths_1910 = death_records(
     *page("194об",
           *death_month(Month.APRIL,
                        death(11, Gender.MALE, None, 2, reviewed=False,
-                             deceased=person("Степанъ", "Григорьевъ", last_name_orig="Шеровъ", status="уволенный в запас армии"),
+                             deceased=person("Степанъ", "Григорьевъ", last_name_orig="Шеровъ", status=SOLDIER, comment="уволенный в запас армии"),
                              comment="кадр 57; умеръ 24 ноября 1909 г., погребенъ 2 апрѣля 1910 г. (въ графахъ «1909 декабря(?) 24», «1910 г. 2»); причина у корешка не дочитана"),
                        death(12, Gender.MALE, 8, 9, reviewed=False,
                              deceased=person("Петръ", "Филипповъ", last_name_orig="Шеровъ"),

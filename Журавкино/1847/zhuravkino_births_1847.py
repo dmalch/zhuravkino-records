@@ -18,7 +18,7 @@ from verso.ru.dsl import (Gender, Month, RecordDefaults, birth, birth_month, bir
 from verso.ru.dsl.statuses import (DEACON, KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MALE, LANDLORD,
                                    LANDLORD_FEMALE, MESHCHANIN, MESHCHANIN_DAUGHTER,
                                    MESHCHANIN_FEMALE, MESHCHANIN_SON, MESHCHANIN_WIFE, PRIEST,
-                                   SEXTON, SOLDIER_WIFE, WIDOW)
+                                   SEXTON, SOLDIER, SOLDIER_WIFE, WIDOW)
 
 zhuravkino_births_1847 = birth_records(
     "ЦГАРМ", "57", "6", "304", "Журавкино", "Николаевская",
@@ -45,13 +45,13 @@ zhuravkino_births_1847 = birth_records(
                 child=person("Гликерия"),
                 father=person("Петр", "Игнатиев", last_name_orig="Булаев"),
                 mother=person("Мавра", "Стефанова"),
-                god_parent1=person("Гавриил", "Стефанов", last_name_orig="Маркеев", status="военнослужащий"),
+                god_parent1=person("Гавриил", "Стефанов", last_name_orig="Маркеев", status=SOLDIER, comment="военнослужащий"),
                 god_parent2=person("Варвара", "Яковлева", last_name_orig="Попова")),
       ),
       *birth_month(Month.OCTOBER,
           birth(32, Gender.FEMALE, 8, 19,
                 child=person("Праскева"),
-                father=person("Гавриил", "Стефанов", last_name_orig="Маркев", status="отпущенный по билету военному"),
+                father=person("Гавриил", "Стефанов", last_name_orig="Маркев", status=SOLDIER, comment="отпущенный по билету военному"),
                 mother=person("Евдокия", "Минова"),
                 god_parent1=person("Василий", "Тарасов", last_name_orig="Косолапов"),
                 god_parent2=person("Татьяна", "Кондратьева", last_name_orig="Шумарина")),
@@ -203,7 +203,7 @@ zhuravkino_births_1847 = birth_records(
                              child=person("Ефимъ"),
                              father=person("Никифоръ", "Максимовъ", "Чудаевъ"),
                              mother=person("Мавра", "Михайлова"),
-                             god_parent1=person("Егоръ", "Васильевъ", "Соломинъ", status="военнослужащий", residence=None, comment="«военнослужащій»; фамилия читается неуверенно"),
+                             god_parent1=person("Егоръ", "Васильевъ", "Соломинъ", status=SOLDIER, residence=None, comment="«военнослужащій»; фамилия читается неуверенно"),
                              god_parent2=person("Агафія", "Васильева", "Чудаева")),
                        birth(11, Gender.FEMALE, 19, 21, reviewed=False,
                              child=person("Матрона", status=SLEPTSOV_GG_DVOROVY_DAUGHTER),

@@ -8,8 +8,9 @@ from corpus.statuses import (ENGALYCHEV_NA_LEGAL_WIFE, ENGALYCHEV_NA_PEASANT_FEM
                              SLEPTSOV_LA_PEASANT_FEMALE, SLEPTSOV_LA_PEASANT_MALE)
 from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, birth, birth_month,
                           birth_records, page, person, relative)
-from verso.ru.dsl.statuses import (BUDNY_PEASANT, MESHCHANIN, SEXTON, YASAK_PEASANT_FEMALE,
-                                   YASAK_PEASANT_LEGAL_WIFE, YASAK_PEASANT_MALE)
+from verso.ru.dsl.statuses import (BUDNY_PEASANT, MESHCHANIN, RETIRED_SOLDIER, SEXTON,
+                                   YASAK_PEASANT_FEMALE, YASAK_PEASANT_LEGAL_WIFE,
+                                   YASAK_PEASANT_MALE)
 
 zhuravkino_births_1835 = birth_records(
     "ЦГАРМ", "57", "1", "404", "Журавкино", "Николая Чудотворца",
@@ -386,7 +387,7 @@ zhuravkino_births_1835 = birth_records(
                              child=person("Ларивон"),
                              father=person("Абрам", "Епифанов", status=SLEPTSOV_GG_PEASANT_MALE),
                              mother=person("Параскева", "Тимофеева", status=SLEPTSOV_GG_LEGAL_WIFE),
-                             god_parent1=person("Григорий", status="отставной военнослужащий", comment="отчество не видно из-за повреждения страницы"),
+                             god_parent1=person("Григорий", status=RETIRED_SOLDIER, comment="отставной военнослужащий; отчество не видно из-за повреждения страницы"),
                              god_parent2=person("Ирина", "Федорова", status=SLEPTSOV_GG_PEASANT_FEMALE),
                              priest=person("Ефим", "Александров")),
                        ),

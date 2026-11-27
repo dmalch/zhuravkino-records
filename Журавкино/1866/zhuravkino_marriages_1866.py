@@ -2,8 +2,8 @@
 from verso.ru.dsl import (Month, RecordDefaults, Relationship, marriage, marriage_month,
                           marriage_records, page, person, relative)
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_BOY, KAZENNYJ_PEASANT_FEMALE,
-                                   KAZENNYJ_PEASANT_GIRL, KAZENNYJ_PEASANT_MALE, SOLDIER_WIFE,
-                                   TEMP_OBLIGED_PEASANT_MALE)
+                                   KAZENNYJ_PEASANT_GIRL, KAZENNYJ_PEASANT_MALE, SOLDIER,
+                                   SOLDIER_WIFE, TEMP_OBLIGED_PEASANT_MALE)
 
 zhuravkino_marriages_1866 = marriage_records(
     "ЦГАРМ", "57", "6", "498", "Журавкино", "Николаевская",
@@ -11,7 +11,7 @@ zhuravkino_marriages_1866 = marriage_records(
     *page("?",
           *marriage_month(Month.NOVEMBER,
                        marriage(17, 6,
-                                groom=person("Деомид", "Семенов", last_name_orig="Сандин", status="уволенный в бессрочный отпуск рядовой"), groom_age=39,
+                                groom=person("Деомид", "Семенов", last_name_orig="Сандин", status=SOLDIER, comment="уволенный в бессрочный отпуск рядовой"), groom_age=39,
                                 bride=person("Наталья", "Спиридонова", status=SOLDIER_WIFE), groom_marriage_num=2, # возможно Шумарина
                                 witness1=person("Карп", "Петров"), # возможно Никулкин
                                 witness2=person("Антон", "Емельянов"),
@@ -87,7 +87,7 @@ zhuravkino_marriages_1866 = marriage_records(
                        ),
           *marriage_month(Month.APRIL,
                        marriage(8, 3, reviewed=False,
-                             groom=person("Кириллъ", "Семеновъ", "Шлепинъ", status="уволенный в бессрочный отпуск рядовой", comment="«уволенный во временный отпускъ рядовой»"), groom_age=35, groom_marriage_num=1,
+                             groom=person("Кириллъ", "Семеновъ", "Шлепинъ", status=SOLDIER, comment="«уволенный во временный отпускъ рядовой»"), groom_age=35, groom_marriage_num=1,
                              bride=person("Ольга", "Григорьева", comment="«дѣвица, дочь казеннаго крестьянина Григорія Потапова Козлова»"), bride_age=17,
                              relatives=[relative(person("Григорій", "Потаповъ", "Козловъ"), Relationship.FATHER, "невеста")],
                              witness1=person("Калинникъ", "Семеновъ"),

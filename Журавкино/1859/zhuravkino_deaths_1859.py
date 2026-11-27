@@ -2,7 +2,9 @@ from corpus.statuses import (ISHEEV_ET_PEASANT_DAUGHTER, ISHEEV_ET_PEASANT_MALE,
 from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, death, death_month,
                           death_records, page, person, relative)
 from verso.ru.dsl.causes_of_death import (COLIC, DIARRHEA, DROPSY, HEADACHE, NATURAL, PLEURISY, SUDDEN_DEATH)
-from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_DAUGHTER, KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_SON, RETIRED_SOLDIER, SOLDIER_DAUGHTER, SOLDIER_SON, SOLDIER_WIFE)
+from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_DAUGHTER, KAZENNYJ_PEASANT_FEMALE,
+                                   KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_SON, RETIRED_SOLDIER,
+                                   SOLDIER, SOLDIER_DAUGHTER, SOLDIER_SON, SOLDIER_WIFE)
 
 zhuravkino_deaths_1859 = death_records(
     "ЦГАРМ", "57", "1", "434", "Журавкино", "Николаевская",
@@ -64,7 +66,7 @@ zhuravkino_deaths_1859 = death_records(
           *death_month(Month.APRIL,
                        death(2, Gender.FEMALE, 2, 3, reviewed=False,
                              deceased=person("Марѳа", status=SOLDIER_DAUGHTER), age=5,
-                             relatives=[relative(person("Антонъ", "Егоровъ", "Кульковъ", status="уволенный во временный отпуск рядовой", comment="«уволеннаго во временный отпускъ рядоваго»"), Relationship.FATHER)],
+                             relatives=[relative(person("Антонъ", "Егоровъ", "Кульковъ", status=SOLDIER, comment="«уволеннаго во временный отпускъ рядоваго»"), Relationship.FATHER)],
                              cause_of_death=HEADACHE),
                        death(3, Gender.FEMALE, 7, 8, reviewed=False,
                              deceased=person("Марина", residence=None), age=3,

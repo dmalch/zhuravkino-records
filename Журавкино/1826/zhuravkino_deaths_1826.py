@@ -6,8 +6,8 @@ from corpus.statuses import (ENGALYCHEV_NA_PEASANT_DAUGHTER, ENGALYCHEV_NA_PEASA
 from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, death, death_month,
                           death_records, page, person, relative)
 from verso.ru.dsl.causes_of_death import CHILDBIRTH, CONSUMPTION, DIARRHEA, FEVER, MEASLES, NATURAL
-from verso.ru.dsl.statuses import (YASAK_PEASANT_DAUGHTER, YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE,
-                                   YASAK_PEASANT_SON)
+from verso.ru.dsl.statuses import (RETIRED_SOLDIER, YASAK_PEASANT_DAUGHTER, YASAK_PEASANT_FEMALE,
+                                   YASAK_PEASANT_MALE, YASAK_PEASANT_SON)
 
 zhuravkino_deaths_1826 = death_records(
     "ЦГАРМ", "57", "6", "118", "Журавкино", "Николая Чудотворца",
@@ -40,7 +40,7 @@ zhuravkino_deaths_1826 = death_records(
                              deceased=person("Тарас", status=YASAK_PEASANT_SON), age=4,
                              relatives=[relative(person("Дмитрий", "Гаврилов"), Relationship.FATHER)]),
                        death(4, Gender.MALE, 23, None,
-                             deceased=person("Михаил", "Вуколов", status="земский отставной солдат"), age=60),
+                             deceased=person("Михаил", "Вуколов", status=RETIRED_SOLDIER, comment="земский отставной солдат"), age=60),
                        death(5, Gender.FEMALE, 16, None,
                              deceased=person("Васса", status=SLEPTSOV_AI_PEASANT_DAUGHTER), age=2,
                              relatives=[relative(person("Васса", "Минова", status=SLEPTSOV_AI_PEASANT_FEMALE), Relationship.MOTHER)]),

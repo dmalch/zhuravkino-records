@@ -1,4 +1,4 @@
-# Проект данных села: DSL читается и проверяется библиотекой verso (https://github.com/verso-genealogy/verso), версия — тег v0.1.52.
+# Проект данных села: DSL читается и проверяется библиотекой verso (https://github.com/verso-genealogy/verso), версия — тег v0.1.53.
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
@@ -10,8 +10,8 @@ description = "Метрические книги и ревизии села Жу
 requires-python = ">=3.14"
 license = "CC-BY-4.0"
 dependencies = [
-    "verso-core @ git+https://github.com/verso-genealogy/verso@v0.1.52#subdirectory=packages/verso-core",
-    "verso-ru[site] @ git+https://github.com/verso-genealogy/verso@v0.1.52#subdirectory=packages/verso-ru",
+    "verso-core @ git+https://github.com/verso-genealogy/verso@v0.1.53#subdirectory=packages/verso-core",
+    "verso-ru[site] @ git+https://github.com/verso-genealogy/verso@v0.1.53#subdirectory=packages/verso-ru",
 ]
 
 [tool.setuptools]

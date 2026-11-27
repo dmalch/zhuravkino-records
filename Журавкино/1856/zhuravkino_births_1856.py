@@ -10,7 +10,7 @@ from verso.ru.dsl import (Gender, Month, RecordDefaults, birth, birth_month, bir
                           person)
 from verso.ru.dsl.statuses import (DEACON, DEACON_DAUGHTER, KAZENNYJ_PEASANT_FEMALE,
                                    KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_WIDOW, PEASANT_SON,
-                                   SEXTON, SEXTON_WIFE, SOLDIER_WIFE)
+                                   SEXTON, SEXTON_WIFE, SOLDIER_WIFE, UNTER_OFFICER)
 
 zhuravkino_births_1856 = birth_records(
     "ЦГАРМ", "57", "1", "425а", "Журавкино", "Николаевская",
@@ -444,7 +444,7 @@ zhuravkino_births_1856 = birth_records(
                              child=person("Александра", status="дочь шацкого мещанина"),
                              father=person("Андрей", "Ивановъ", status="шацкий мещанин", residence=None, comment="«Шацкій мѣщанинъ»"),
                              mother=person("Евдокія", "Акинѳова", status="жена шацкого мещанина", residence=None, comment="отчество читается неуверенно"),
-                             god_parent1=person("Василій", "Ивановъ", status="отставной унтер-офицер", residence=None, comment="«отставной унтеръ-офицеръ Василій Ивановъ Ман…» — фамилия у корешка не читается"),
+                             god_parent1=person("Василій", "Ивановъ", status=UNTER_OFFICER, residence=None, comment="«отставной унтеръ-офицеръ Василій Ивановъ Ман…» — фамилия у корешка не читается"),
                              god_parent2=person("Марья", status="дочь спасского мещанина девица", residence=None, comment="«Спасскаго мѣщанина …ласія(?) Ѳедорова Б… дочь дѣвица Марья»")),
                        ),
           ),
@@ -495,13 +495,13 @@ zhuravkino_births_1856 = birth_records(
                              child=person("Михаилъ", status="сын диакона"),
                              father=person("Александръ", "Никифоровъ", last_name_orig="Богородицкій", status=DEACON, comment="«приходской діаконъ»"),
                              mother=person("Дарья", "Яковлева", status="жена диакона"),
-                             god_parent1=person("Ѳеодоръ", last_name_orig="Прилепскій", status="отставной унтер-офицер", residence=None, comment="«лѣсной объѣздчикъ унтеръ-офицеръ Ѳедоръ Тр… Прилепскій» — отчество у корешка не читается"),
+                             god_parent1=person("Ѳеодоръ", last_name_orig="Прилепскій", status=UNTER_OFFICER, residence=None, comment="«лѣсной объѣздчикъ унтеръ-офицеръ Ѳедоръ Тр… Прилепскій» — отчество у корешка не читается"),
                              comment="близнецы Михаилъ и Софія (м41, ж27); вторая восприемница у корешка: «помещицы … Слепцовой дворовая дѣвка … Степанова»"),
                        birth(27, Gender.FEMALE, 25, 26, reviewed=False,
                              child=person("Софія", status=DEACON_DAUGHTER),
                              father=person("Александръ", "Никифоровъ", last_name_orig="Богородицкій", status=DEACON, comment="«приходской діаконъ»"),
                              mother=person("Дарья", "Яковлева", status="жена диакона"),
-                             god_parent1=person("Ѳеодоръ", last_name_orig="Прилепскій", status="отставной унтер-офицер", residence=None, comment="«лѣсной объѣздчикъ унтеръ-офицеръ Ѳедоръ Тр… Прилепскій» — отчество у корешка не читается"),
+                             god_parent1=person("Ѳеодоръ", last_name_orig="Прилепскій", status=UNTER_OFFICER, residence=None, comment="«лѣсной объѣздчикъ унтеръ-офицеръ Ѳедоръ Тр… Прилепскій» — отчество у корешка не читается"),
                              comment="близнецы Михаилъ и Софія (м41, ж27), восприемники записаны общие; вторая восприемница у корешка: «помещицы … Слепцовой дворовая дѣвка … Степанова»"),
                        birth(42, Gender.MALE, 27, 30, reviewed=False,
                              child=person("Петръ"),

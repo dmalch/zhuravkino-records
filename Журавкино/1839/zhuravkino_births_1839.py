@@ -15,9 +15,9 @@ from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, birth, bi
                           birth_records, page, person, relative)
 from verso.ru.dsl.statuses import (BUDNY_PEASANT, ECON_PEASANT_LEGAL_WIFE, ECON_PEASANT_MALE,
                                    MAIDEN, ODNODVORETS, ODNODVORETS_LEGAL_WIFE, ODNODVORETS_SON,
-                                   SEXTON, SEXTON_WIFE, SOLDIER_WIFE, WIDOW, YASAK_PEASANT_FEMALE,
-                                   YASAK_PEASANT_LEGAL_WIFE, YASAK_PEASANT_MAIDEN,
-                                   YASAK_PEASANT_MALE)
+                                   RETIRED_SOLDIER, SEXTON, SEXTON_WIFE, SOLDIER_SON, SOLDIER_WIFE,
+                                   WIDOW, YASAK_PEASANT_FEMALE, YASAK_PEASANT_LEGAL_WIFE,
+                                   YASAK_PEASANT_MAIDEN, YASAK_PEASANT_MALE)
 
 zhuravkino_births_1839 = birth_records(
     "ЦГАРМ", "57", "1", "405", "Журавкино", "Живоносный Источник Пресвятой Богородицы",
@@ -221,7 +221,7 @@ zhuravkino_births_1839 = birth_records(
                              child=person("Феодосія"),
                              father=person("Авраамъ", "Епифановъ", last_name_orig="Кривой", status=SLEPTSOV_GG_PEASANT_MALE),
                              mother=person("Праскева", "Тимофеева", status=SLEPTSOV_GG_LEGAL_WIFE),
-                             god_parent1=person("Григорий", "Филатов", last_name_orig="Кривой", status="отставной военнослужащий"),
+                             god_parent1=person("Григорий", "Филатов", last_name_orig="Кривой", status=RETIRED_SOLDIER, comment="отставной военнослужащий"),
                              god_parent2=person("Елена", "Барисова", last_name_orig="Шишкина", status=SLEPTSOV_AI_PEASANT_FEMALE)),
                        ),
           *birth_month(Month.JUNE,
@@ -370,7 +370,7 @@ zhuravkino_births_1839 = birth_records(
                              child=person("Моисей"),
                              father=person("Ефимъ", "Прохоровъ", last_name_orig="Чудаевъ"),
                              mother=person("Татіана", "Никифорова"),
-                             god_parent1=person("Авдей", "Филипповъ", "Бычковъ", status="кантонист"),
+                             god_parent1=person("Авдей", "Филипповъ", "Бычковъ", status=SOLDIER_SON, comment="кантонист"),
                              god_parent2=person("Анна", "Прохорова", last_name_orig="Чудаева")),
                        ),
           *birth_month(Month.SEPTEMBER,

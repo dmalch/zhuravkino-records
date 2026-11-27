@@ -155,7 +155,7 @@ zhuravkino_marriages_1908 = marriage_records(
                              witness3=person("Прокопій", "Филипповъ", last_name_orig="Чудайкинъ"),
                              witness4=person("Андрей", last_name_orig="Сураевъ")),
                        marriage(17, 28, reviewed=False,
-                             groom=person("Тимоѳей", "Трофимовъ", last_name_orig="Мамаевъ", status="уволенный в запас армии", residence=None, comment="«деревни Умета»"), groom_age=25, groom_marriage_num=1,
+                             groom=person("Тимоѳей", "Трофимовъ", last_name_orig="Мамаевъ", status=SOLDIER, residence=None, comment="уволенный в запас армии; «деревни Умета»"), groom_age=25, groom_marriage_num=1,
                              bride=person("Евдокія", "Иванова", last_name_orig="Богомазова-Кудрявцева", residence=None, comment="«крестьянка деревни Умета»"), bride_age=24, bride_marriage_num=2,
                              witness1=person("Матвѣй", last_name_orig="Мамаевъ", residence=None),
                              witness2=person("Филиппъ", last_name_orig="Кузнецовъ", residence=None, comment="«деревни Зубовой Поляны»"),

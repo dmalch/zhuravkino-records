@@ -4,7 +4,7 @@ from verso.ru.dsl import (Month, RecordDefaults, Relationship, marriage, marriag
 from verso.ru.dsl.statuses import (DEACON, DEACON_DAUGHTER, KAZENNYJ_PEASANT_BOY,
                                    KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_GIRL,
                                    KAZENNYJ_PEASANT_MALE, MESHCHANIN, PROPRIETOR_PEASANT_MALE,
-                                   SEXTON, UNTER_OFFICER)
+                                   SEXTON, SOLDIER, UNTER_OFFICER)
 
 zhuravkino_marriages_1880 = marriage_records(
     "ГАРО", "627", "298", "56", "Журавкино", "Николаевская",
@@ -139,7 +139,7 @@ zhuravkino_marriages_1880 = marriage_records(
                              witness3=person("Еремѣй", "Митрофановъ", comment="имя читается неуверенно; фамилии нет"),
                              witness4=person("Иванъ", "Платоновъ", "Филатовъ", comment="фамилия читается неуверенно")),
                        marriage(12, 3, reviewed=False,
-                             groom=person("Михаилъ", "Логиновъ", "Дыринъ", status="бессрочноотпускной рядовой", comment="«безсрочно-отпускной рядовой солдатъ»"), groom_age=27, groom_marriage_num=1,
+                             groom=person("Михаилъ", "Логиновъ", "Дыринъ", status=SOLDIER, comment="«безсрочно-отпускной рядовой солдатъ»"), groom_age=27, groom_marriage_num=1,
                              bride=person("Евфросинія", "Ефимова", residence="Каргашино", comment="«села Каргашина казенная крестьянка»"), bride_age=18,
                              witness1=person("Иванъ", "Акиндиновъ", comment="фамилии нет"),
                              witness2=person("Николай", "Яковлевъ", "Сураевъ"),
@@ -205,7 +205,7 @@ zhuravkino_marriages_1880 = marriage_records(
     *page("29об",
           *marriage_month(Month.APRIL,
                        marriage(21, 27, reviewed=False,
-                             groom=person("Максимъ", "Игнатовъ", "Авдѣевъ", status="запасный рядовой", comment="«уволенный въ запасъ рядовой солдатъ»; фамилия читается неуверенно"), groom_age=26, groom_marriage_num=1,
+                             groom=person("Максимъ", "Игнатовъ", "Авдѣевъ", status=SOLDIER, comment="«уволенный въ запасъ рядовой солдатъ»; фамилия читается неуверенно"), groom_age=26, groom_marriage_num=1,
                              bride=person("Евдокія", "Данилова", "Рычкова", status="крестьянка собственница"), bride_age=18,
                              witness1=person("Спиридонъ", "Игнатовъ", "Наумкинъ"),
                              witness2=person("Василій", "Прокопіевъ", "Блохинъ", status=PROPRIETOR_PEASANT_MALE, comment="фамилия читается неуверенно"),

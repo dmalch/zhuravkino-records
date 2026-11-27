@@ -1,8 +1,8 @@
 from corpus.statuses import SLEPTSOV_AI_PEASANT_FEMALE, SLEPTSOV_AI_PEASANT_MALE
 from verso.ru.dsl import (Month, RecordDefaults, marriage, marriage_month, marriage_records, page,
                           person)
-from verso.ru.dsl.statuses import (YASAK_PEASANT_BOY, YASAK_PEASANT_FEMALE, YASAK_PEASANT_GIRL,
-                                   YASAK_PEASANT_MALE, YASAK_PEASANT_WIDOW)
+from verso.ru.dsl.statuses import (RETIRED_SOLDIER, YASAK_PEASANT_BOY, YASAK_PEASANT_FEMALE,
+                                   YASAK_PEASANT_GIRL, YASAK_PEASANT_MALE, YASAK_PEASANT_WIDOW)
 
 zhuravkino_marriages_1823 = marriage_records(
     "ЦГАРМ", "57", "1", "397", "Журавкино", "Николая Чудотворца",
@@ -21,7 +21,7 @@ zhuravkino_marriages_1823 = marriage_records(
                                    groom=person("Перфил", "Иванов", status=YASAK_PEASANT_BOY),
                                    bride=person("Акилина", "Григорьева"),
                                    witness1=person("Терентий", "Акимов"),
-                                   witness2=person("Михаил", "Викулов", status="отставной сержант"),
+                                   witness2=person("Михаил", "Викулов", status=RETIRED_SOLDIER, comment="отставной сержант"),
                                    witness4=person("Настасья", "Антонова")),
                           marriage(3, 18,
                                    groom=person("Алексей", "Георгиев", status=YASAK_PEASANT_BOY),

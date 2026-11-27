@@ -13,7 +13,7 @@ from verso.ru.dsl import (Gender, Month, RecordDefaults, birth, birth_month, bir
                           person)
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MALE, LANDLORD,
                                    LANDLORD_FEMALE, MESHCHANIN, MESHCHANIN_SON, MESHCHANIN_WIFE,
-                                   PRIEST, SEXTON, SEXTON_WIFE, SOLDIER_WIFE)
+                                   PRIEST, SEXTON, SEXTON_WIFE, SOLDIER, SOLDIER_WIFE)
 
 zhuravkino_births_1848 = birth_records(
     "?", "?", "?", "?", "Журавкино", "Николаевская",
@@ -516,7 +516,7 @@ zhuravkino_births_1848 = birth_records(
                              child=person("Сергій", status="крестьянский сын помещика Ефима Слепцова"),
                              father=person("Петръ", "Осиповъ", "Китаевъ", status="крестьянин помещика Ефима Слепцова"),
                              mother=person("Татіана", "Іонова", status="жена крестьянина помещика Ефима Слепцова"),
-                             god_parent1=person("Петръ", "Степановъ", status="военнослужащий", comment="«служащий полевой(?)»; фамилия не прочитана"),
+                             god_parent1=person("Петръ", "Степановъ", status=SOLDIER, comment="военнослужащий; «служащий полевой(?)»; фамилия не прочитана"),
                              god_parent2=person("Наталія", "Прохорова", "Дворянчикова", status="крестьянка помещика Ефима Слепцова", comment="фамилия читается неуверенно")),
           *birth_month(Month.OCTOBER,
                        birth(38, Gender.FEMALE, 1, 1, reviewed=False,

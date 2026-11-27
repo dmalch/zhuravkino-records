@@ -2,7 +2,7 @@ from corpus.statuses import ENGALYCHEV_NA_PEASANT_MALE, ISHEEV_ET_PEASANT_MALE
 from verso.ru.dsl import (Month, RecordDefaults, Relationship, marriage, marriage_month,
                           marriage_records, page, person, relative)
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MAIDEN,
-                                   KAZENNYJ_PEASANT_MALE, MESHCHANIN, UNTER_OFFICER)
+                                   KAZENNYJ_PEASANT_MALE, MESHCHANIN, SOLDIER_SON, UNTER_OFFICER)
 
 # МК 1858, ЦГАРМ 57-6-422 (кн. № 42), ч. 2 лл. 187об–189об (альбом Photos «1858», pk 1223, кадры 23–25; кадр k = лл. (164+k)об и (165+k)).
 # Прочитано сплошь 02.11.2026 по сканам, reviewed=False — ждёт вычитки владельцем.
@@ -32,7 +32,7 @@ zhuravkino_marriages_1858 = marriage_records(
                              witness3=person("Варѳоломей", "Моисеевъ"),
                              witness4=person("Ѳеоктистъ", "Митрофановъ", comment="отчество читается неуверенно")),
                        marriage(3, 13,
-                             groom=person("Василій", "Сергѣевъ", status="сын унтер-офицера"), groom_age=20, groom_marriage_num=1,
+                             groom=person("Василій", "Сергѣевъ", status=SOLDIER_SON, comment="сын унтер-офицера"), groom_age=20, groom_marriage_num=1,
                              bride=person("Марія", "Михайлова", status="дочь мещанина", residence=None, comment="«Спасскаго мѣщанина дочь»"), bride_age=18,
                              relatives=[relative(person("Сергѣй", "Кононовъ", status=UNTER_OFFICER), Relationship.FATHER, "жених"),
                                         relative(person("Михаилъ", "Ѳеодоровъ", status=MESHCHANIN, residence=None, comment="«Спасскій мѣщанинъ»"), Relationship.FATHER, "невеста")],

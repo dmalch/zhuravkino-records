@@ -9,7 +9,7 @@ from corpus.statuses import (ENGALYCHEV_NA_LEGAL_WIFE, ENGALYCHEV_NA_PEASANT_FEM
 from verso.ru.dsl import (Gender, Month, RecordDefaults, birth, birth_month, birth_records, page,
                           person)
 from verso.ru.dsl.statuses import (DEACON, KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_MALE, PRIEST,
-                                   PRIVATE_SOLDIER, RETIRED_SOLDIER, SOLDIER_WIFE)
+                                   PRIVATE_SOLDIER, RETIRED_SOLDIER, SOLDIER, SOLDIER_WIFE)
 
 # МК 1862, ЦГАРМ 57-6-458, кн. № 42, ч. 1 лл. 765об–785об (альбом Photos «1862 (ЦГАРМ 57-6-458)», pk 1175, кадры 2–22).
 # Прочитано сплошь 02.11.2026 по сканам (с подсказкой OCR Яндекс.Архива), reviewed=False — ждёт вычитки владельцем.
@@ -41,7 +41,7 @@ zhuravkino_births_1862 = birth_records(
                              god_parent2=person("Васса", "Сидорова", status=KUGUSHEV_IV_PEASANT_FEMALE, residence="Авдалово", comment="«помещика Кугушева крестьянка»")),
                        birth(2, Gender.FEMALE, 11, 12,
                              child=person("Татіана"),
-                             father=person("Власъ", "Митрофановъ", status="рядовой в бессрочном отпуске", residence=None, comment="«уволенный во временный отпускъ рядовой»"),
+                             father=person("Власъ", "Митрофановъ", status=SOLDIER, residence=None, comment="«уволенный во временный отпускъ рядовой»"),
                              mother=person("Ѳеодосія", "Ефимова", status=SOLDIER_WIFE, residence=None),
                              god_parent1=person("Матвѣй", "Ивановъ", status="крестьянин помещицы Варвары Слепцовой", comment="«помещицы Варвары Слепцовой крестьянинъ»"),
                              god_parent2=person("Евгенія", "Митрофанова", status=SOLDIER_WIFE)),
@@ -107,7 +107,7 @@ zhuravkino_births_1862 = birth_records(
                              child=person("Алексѣй"),
                              father=person("Митрофанъ", "Ефимовъ", status=ISHEEV_ET_PEASANT_MALE, residence="Авдалово", comment="«помещицы Ишеевой крестьянинъ»"),
                              mother=person("Устинія", "Карпова", status=ISHEEV_ET_LEGAL_WIFE, comment="отчество читается неуверенно"),
-                             god_parent1=person("Архипъ", "Ефимовъ", status="рядовой в бессрочном отпуске", residence=None, comment="«уволенный во временный отпускъ рядовой»"),
+                             god_parent1=person("Архипъ", "Ефимовъ", status=SOLDIER, residence=None, comment="«уволенный во временный отпускъ рядовой»"),
                              god_parent2=person("Матрена", "Михайлова", status=ENGALYCHEV_NA_PEASANT_FEMALE, residence="Авдалово", comment="«помещика Енгалычева крестьянка»")),
                        birth(10, Gender.MALE, 6, 11,
                              child=person("Никифоръ"),
@@ -153,7 +153,7 @@ zhuravkino_births_1862 = birth_records(
                              child=person("Евдокія"),
                              father=person("Иванъ", "Григорьевъ", "Козловъ"),
                              mother=person("Настасія", "Васильева"),
-                             god_parent1=person("Петръ", "Ивановъ", "Васильевъ", status="рядовой Ряжского полка", residence=None, comment="«Ряжскаго полка»"),
+                             god_parent1=person("Петръ", "Ивановъ", "Васильевъ", status=SOLDIER, residence=None, comment="«Ряжскаго полка»"),
                              god_parent2=person("Дарья", "Григорьева", "Пятрина", comment="фамилия читается неуверенно")),
                        birth(14, Gender.MALE, 26, 27,
                              child=person("Герасимъ", status="крестьянский сын помещицы Варвары Слепцовой"),
@@ -246,7 +246,7 @@ zhuravkino_births_1862 = birth_records(
                              child=person("Иванъ"),
                              father=person("Михаилъ", "Ивановъ", status="семейный житель Новинского обхода", residence=None, comment="«…нскаго обхода семейный», название обхода, отчество и фамилия («…кинъ») читаются неуверенно"),
                              mother=person("Ксенія", status="жена семейного жителя обхода", residence=None, comment="отчество («Неупокоева»?) не дочитано"),
-                             god_parent1=person("Тимоѳей", "Перфиловъ", "Китаевъ", status="рядовой в бессрочном отпуске", residence=None, comment="«уволенный во временный отпускъ рядовой»"),
+                             god_parent1=person("Тимоѳей", "Перфиловъ", "Китаевъ", status=SOLDIER, residence=None, comment="«уволенный во временный отпускъ рядовой»"),
                              god_parent2=person("Дарья", "Семенова", status=SOLDIER_WIFE, comment="отчество читается неуверенно")),
                        ),
           ),
@@ -411,7 +411,7 @@ zhuravkino_births_1862 = birth_records(
                              child=person("Меѳодій", status="крестьянский сын помещицы Толмачевой"),
                              father=person("Петръ", "Ильинъ", status="крестьянин помещицы Толмачевой", residence=None, comment="«помещицы Толмачевой крестьянинъ»"),
                              mother=person("Ирина", "Ефимова", status="жена крестьянина помещицы Толмачевой", residence=None),
-                             god_parent1=person("Архипъ", "Ефимовъ", status="рядовой в бессрочном отпуске", residence=None, comment="«уволенный въ безсрочный отпускъ рядовой»"),
+                             god_parent1=person("Архипъ", "Ефимовъ", status=SOLDIER, residence=None, comment="«уволенный въ безсрочный отпускъ рядовой»"),
                              god_parent2=person("Ксенія", "Гурьева", status=KUGUSHEV_IV_PEASANT_FEMALE, residence="Авдалово", comment="«помещика Кугушева крестьянка»")),
                        birth(27, Gender.FEMALE, 12, 17,
                              child=person("Акилина"),
@@ -709,7 +709,7 @@ zhuravkino_births_1862 = birth_records(
           *birth_month(Month.OCTOBER,
                        birth(55, Gender.MALE, 26, 28,
                              child=person("Козма"),
-                             father=person("Дороѳей", "Прокопьевъ", status="рядовой в бессрочном отпуске", residence=None, comment="«уволенный во временный отпускъ рядовой»"),
+                             father=person("Дороѳей", "Прокопьевъ", status=SOLDIER, residence=None, comment="«уволенный во временный отпускъ рядовой»"),
                              mother=person("Наталія", "Спиридонова", status=SOLDIER_WIFE, residence=None),
                              god_parent1=person("Осипъ", "Спиридоновъ", "Шумаринъ"),
                              god_parent2=person("Ольга", "Ефимова", "Чудаева")),

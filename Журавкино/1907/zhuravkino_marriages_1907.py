@@ -1,7 +1,8 @@
 
 from verso.ru.dsl import (Month, RecordDefaults, marriage, marriage_month, marriage_records, page,
                           person)
-from verso.ru.dsl.statuses import (PEASANT_BOY, PEASANT_FEMALE, PEASANT_GIRL, PEASANT_MALE, PEASANT_WIDOW, SOLDIER)
+from verso.ru.dsl.statuses import (PEASANT_BOY, PEASANT_FEMALE, PEASANT_GIRL, PEASANT_MALE,
+                                   PEASANT_WIDOW, RETIRED_SOLDIER, SOLDIER)
 
 zhuravkino_marriages_1907 = marriage_records(
     "ЦГАРМ", "57", "7", "81", "Журавкино", "Николаевская",
@@ -116,8 +117,8 @@ zhuravkino_marriages_1907 = marriage_records(
                              bride=person("Марія", "Иванова", last_name_orig="Самлина", comment="фамилия читается неуверенно"), bride_age=18, bride_marriage_num=1,
                              witness1=person("Петръ", "Митрофановъ", last_name_orig="Сураевъ"),
                              witness2=person("Ѳеодоръ", "Михайловъ", last_name_orig="Чудайкинъ"),
-                             witness3=person("Михаилъ", "Ѳеодоровъ", last_name_orig="Гавкинъ", status="отставной рядовой", comment="«отставной солдатъ»"),
-                             witness4=person("Косма", "Митрофановъ", last_name_orig="Сураевъ", status="бессрочно-отпускной солдат", comment="«бессрочный солдатъ»"),
+                             witness3=person("Михаилъ", "Ѳеодоровъ", last_name_orig="Гавкинъ", status=RETIRED_SOLDIER, comment="«отставной солдатъ»"),
+                             witness4=person("Косма", "Митрофановъ", last_name_orig="Сураевъ", status=SOLDIER, comment="«бессрочный солдатъ»"),
                              comment="итогъ января по книгѣ: 8 браковъ"),
                        ),
           ),
@@ -132,17 +133,17 @@ zhuravkino_marriages_1907 = marriage_records(
                              witness4=person("Прокопій", "Ѳеодотовъ", last_name_orig="Сураевъ"),
                              comment="день «〃»"),
                        marriage(11, 18, reviewed=False,
-                             groom=person("Стефанъ", "Акакіевъ", last_name_orig="Филинъ", status="уволенный в запас армии", residence="Авдалово"), groom_age=32, groom_marriage_num=2,
+                             groom=person("Стефанъ", "Акакіевъ", last_name_orig="Филинъ", status=SOLDIER, comment="уволенный в запас армии", residence="Авдалово"), groom_age=32, groom_marriage_num=2,
                              bride=person("Евдокія", "Николаева", last_name_orig="Каменнова", residence=None, comment="«крестьянка села Матвѣевскаго Майдана»; фамилия читается неуверенно"), bride_age=27, bride_marriage_num=2,
                              witness1=person("Иванъ", "Аверкіевъ", last_name_orig="Стручковъ", status=SOLDIER, residence="Авдалово", comment="«солдатъ»"),
                              witness2=person("Сергѣй", "Аверкіевъ", last_name_orig="Стручковъ", residence="Авдалово"),
-                             witness3=person("Филиппъ", "Сергѣевъ", status="отставной рядовой", residence="Авдалово", comment="«отставной солдатъ»; фамилия не записана"),
+                             witness3=person("Филиппъ", "Сергѣевъ", status=RETIRED_SOLDIER, residence="Авдалово", comment="«отставной солдатъ»; фамилия не записана"),
                              witness4=person("Михаилъ", last_name_orig="Филинъ", residence="Авдалово"),
                              comment="оба вторымъ бракомъ; вдовецъ Ирины Аверкіевой (погребеніе ж59 1906 г.); лѣта невѣсты читаются неуверенно"),
                        marriage(12, 18, reviewed=False,
                              groom=person("Алексѣй", "Владиміровъ", last_name_orig="Козловъ"), groom_age="17 л 11 мес", groom_marriage_num=1,
                              bride=person("Анна", "Павлова", last_name_orig="Шишкина", residence="Каргашино", comment="фамилия читается неуверенно"), bride_age=20, bride_marriage_num=1,
-                             witness1=person("Василій", "Ивановъ", last_name_orig="Татаровъ", status="уволенный в запас армии"),
+                             witness1=person("Василій", "Ивановъ", last_name_orig="Татаровъ", status=SOLDIER, comment="уволенный в запас армии"),
                              witness2=person("Ѳеодоръ", "Михайловъ", last_name_orig="Козловъ"),
                              witness3=person("Петръ", "Марковъ", last_name_orig="Купцовъ"),
                              witness4=person("Матвѣй", "Агѣевъ", last_name_orig="Кулевъ", comment="фамилия читается неуверенно"),
@@ -152,7 +153,7 @@ zhuravkino_marriages_1907 = marriage_records(
     *page("323об",
           *marriage_month(Month.FEBRUARY,
                        marriage(13, 23, reviewed=False,
-                             groom=person("Николай", "Филипповъ", last_name_orig="Тишкинъ", status="состоящий в запасе армии", comment="«солдатъ, состоящій въ запасѣ арміи»"), groom_age=37, groom_marriage_num=2,
+                             groom=person("Николай", "Филипповъ", last_name_orig="Тишкинъ", status=SOLDIER, comment="«солдатъ, состоящій въ запасѣ арміи»"), groom_age=37, groom_marriage_num=2,
                              bride=person("Марѳа", "Иванова", last_name_orig="Ульянова", residence=None, comment="«крестьянка села Анаева»; фамилия читается неуверенно"), bride_age=29, bride_marriage_num=2,
                              witness1=person("Егоръ", "Никитинъ", last_name_orig="Тишкинъ"),
                              witness2=person("Акимъ", last_name_orig="Тишкинъ"),

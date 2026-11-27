@@ -12,8 +12,8 @@ from verso.ru.dsl.causes_of_death import (CHILDBIRTH, COLD, COLIC, CONSUMPTION, 
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_DAUGHTER, KAZENNYJ_PEASANT_FEMALE,
                                    KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_SON,
                                    KAZENNYJ_PEASANT_WIDOW, KAZENNYJ_PEASANT_WIFE, MESHCHANIN,
-                                   MESHCHANIN_SON, RETIRED_SOLDIER, SOLDIER_DAUGHTER, SOLDIER_SON,
-                                   SOLDIER_WIDOW, SOLDIER_WIFE)
+                                   MESHCHANIN_SON, RETIRED_SOLDIER, SOLDIER, SOLDIER_DAUGHTER,
+                                   SOLDIER_SON, SOLDIER_WIDOW, SOLDIER_WIFE)
 
 zhuravkino_deaths_1860 = death_records(
     "ЦГАРМ", "57", "6", "441", "Журавкино", "Николаевская",
@@ -152,7 +152,7 @@ zhuravkino_deaths_1860 = death_records(
                              cause_of_death=CONSUMPTION),
                        death(18, Gender.MALE, 14, 15, reviewed=False,
                              deceased=person("Андрей", status=SOLDIER_SON), age=2,
-                             relatives=[relative(person("Павелъ", "Ивановъ", status="уволенный в бессрочный отпуск рядовой", comment="«уволеннаго въ безсрочный отпускъ рядоваго»"), Relationship.FATHER)],
+                             relatives=[relative(person("Павелъ", "Ивановъ", status=SOLDIER, comment="«уволеннаго въ безсрочный отпускъ рядоваго»"), Relationship.FATHER)],
                              cause_of_death=HEADACHE),
                        death(15, Gender.FEMALE, 17, 19, reviewed=False,
                              deceased=person("Ксенія", "Алексѣева", residence=None, comment="«Борисовскаго обхода»"), age=55,
@@ -214,7 +214,7 @@ zhuravkino_deaths_1860 = death_records(
                              cause_of_death=DIARRHEA),
                        death(22, Gender.FEMALE, 24, 25, reviewed=False,
                              deceased=person("Акилина", status=SOLDIER_DAUGHTER), age=1,
-                             relatives=[relative(person("Тимоѳей", "Перфиловъ", status="уволенный в бессрочный отпуск рядовой", comment="«уволеннаго въ безсрочный отпускъ рядоваго»"), Relationship.FATHER)],
+                             relatives=[relative(person("Тимоѳей", "Перфиловъ", status=SOLDIER, comment="«уволеннаго въ безсрочный отпускъ рядоваго»"), Relationship.FATHER)],
                              cause_of_death=DIARRHEA),
                        death(23, Gender.FEMALE, 27, 28, reviewed=False,
                              deceased=person("Дарья", "Кирилова", status=SOLDIER_WIFE, comment="«солдатка изъ казенныхъ крестьянъ»; отчество читается неуверенно"), age=44),
@@ -264,7 +264,7 @@ zhuravkino_deaths_1860 = death_records(
           *death_month(Month.DECEMBER,
                        death(31, Gender.MALE, 1, 2, reviewed=False,
                              deceased=person("Григорій", status=SOLDIER_SON), age=3,
-                             relatives=[relative(person("Никита", "Васильевъ", status="уволенный в бессрочный отпуск рядовой", comment="«уволеннаго въ безсрочный отпускъ рядоваго»"), Relationship.FATHER)],
+                             relatives=[relative(person("Никита", "Васильевъ", status=SOLDIER, comment="«уволеннаго въ безсрочный отпускъ рядоваго»"), Relationship.FATHER)],
                              cause_of_death=COLD),
                        death(27, Gender.FEMALE, 9, 10, reviewed=False,
                              deceased=person("Марина", status=ISHEEV_ET_PEASANT_DAUGHTER, residence="Авдалово", comment="род. 14.07.1860 (ч. 1, ж31)"), age="полгода",

@@ -9,8 +9,8 @@ from verso.ru.dsl.causes_of_death import (COLIC, CONSUMPTION, DIARRHEA, FEVER, H
                                           NATURAL, PARALYSIS, PLEURISY, SCARLATINA)
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_DAUGHTER, KAZENNYJ_PEASANT_FEMALE,
                                    KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_SON,
-                                   KAZENNYJ_PEASANT_WIDOW, KAZENNYJ_PEASANT_WIFE, SOLDIER_DAUGHTER,
-                                   SOLDIER_SON)
+                                   KAZENNYJ_PEASANT_WIDOW, KAZENNYJ_PEASANT_WIFE, SOLDIER,
+                                   SOLDIER_DAUGHTER, SOLDIER_SON)
 
 # МК 1862, ЦГАРМ 57-6-458, кн. № 42, ч. 3 лл. 792об–799об (альбом Photos «1862 (ЦГАРМ 57-6-458)», pk 1175, кадры 29–36).
 # Прочитано сплошь 02.11.2026 по сканам (с подсказкой OCR Яндекс.Архива), reviewed=False — ждёт вычитки владельцем.
@@ -128,7 +128,7 @@ zhuravkino_deaths_1862 = death_records(
           *death_month(Month.APRIL,
                        death(14, Gender.FEMALE, 12, 13,
                              deceased=person("Татіана", status=SOLDIER_DAUGHTER, residence=None), age="3 месяца",
-                             relatives=[relative(person("Власъ", "Митрофановъ", status="рядовой в бессрочном отпуске", residence=None, comment="«уволенный во временный отпускъ рядовой»"), Relationship.FATHER)],
+                             relatives=[relative(person("Власъ", "Митрофановъ", status=SOLDIER, residence=None, comment="«уволенный во временный отпускъ рядовой»"), Relationship.FATHER)],
                              cause_of_death=COLIC,
                              comment="возраст читается неуверенно; родилась 11.01.1862 (ч. 1, ж2)"),
                        death(12, Gender.MALE, 17, 18,
@@ -250,7 +250,7 @@ zhuravkino_deaths_1862 = death_records(
           *death_month(Month.SEPTEMBER,
                        death(28, Gender.MALE, 5, 6,
                              deceased=person("Антонъ", status=SOLDIER_SON, residence=None), age="полгода",
-                             relatives=[relative(person("Антонъ", "Егоровъ", "Кульковъ", status="рядовой в бессрочном отпуске", residence=None, comment="«уволенный во временный отпускъ рядовой»"), Relationship.FATHER)],
+                             relatives=[relative(person("Антонъ", "Егоровъ", "Кульковъ", status=SOLDIER, residence=None, comment="«уволенный во временный отпускъ рядовой»"), Relationship.FATHER)],
                              cause_of_death=DIARRHEA),
                        ),
           ),

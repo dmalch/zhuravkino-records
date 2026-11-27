@@ -17,7 +17,7 @@ from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, birth, bi
                           birth_records, page, person, relative)
 from verso.ru.dsl.statuses import (DEACON, DEACON_DAUGHTER, KAZENNYJ_PEASANT_DAUGHTER,
                                    KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_LEGAL_WIFE,
-                                   KAZENNYJ_PEASANT_MALE, MESHCHANIN, SEXTON, SEXTON_WIFE,
+                                   KAZENNYJ_PEASANT_MALE, MESHCHANIN, SEXTON, SEXTON_WIFE, SOLDIER,
                                    SOLDIER_WIFE, WIDOW, YASAK_PEASANT_MALE)
 
 zhuravkino_births_1841 = birth_records(
@@ -71,7 +71,7 @@ zhuravkino_births_1841 = birth_records(
                              child=person("Никифоръ"),
                              father=person("Егоръ", "Семеновъ", "Сандинъ"),
                              mother=person("Василиса", "Петрова"),
-                             god_parent1=person("Тимофей", "Ильинъ", status="военнослужащий"),
+                             god_parent1=person("Тимофей", "Ильинъ", status=SOLDIER, comment="военнослужащий"),
                              god_parent2=person("Евдокія", "Никитина", "Сандина")),
                        birth(2, Gender.FEMALE, 4, 6,
                              child=person("Агафья"),
@@ -500,7 +500,7 @@ zhuravkino_births_1841 = birth_records(
                              father=person("Кондратій", "Ивановъ", status=ENGALYCHEV_NA_PEASANT_MALE, residence="Авдалово"),
                              mother=person("Агафья", "Ларіонова", status=ENGALYCHEV_NA_LEGAL_WIFE),
                              god_parent1=person("Павелъ", "Павловъ", status=KUGUSHEV_IV_PEASANT_MALE),
-                             god_parent2=person("Анна", "Яковлева", "Бакланова", status="Солдатка")),
+                             god_parent2=person("Анна", "Яковлева", "Бакланова", status=SOLDIER_WIFE, comment="Солдатка")),
                        birth(37, Gender.FEMALE, 11, 12,
                              child=person("Параскева"),
                              father=person("Семенъ", "Феодоровъ", status=SLEPTSOV_AG_PEASANT_MALE),

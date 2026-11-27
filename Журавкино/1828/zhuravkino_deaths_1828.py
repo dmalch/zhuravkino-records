@@ -7,7 +7,7 @@ from corpus.statuses import (ENGALYCHEV_NA_PEASANT_DAUGHTER, ENGALYCHEV_NA_PEASA
 from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, death, death_month,
                           death_records, page, person, relative)
 from verso.ru.dsl.causes_of_death import DIARRHEA, MILL_COLLAPSE, NATURAL, SMALLPOX
-from verso.ru.dsl.statuses import (DYACHOK, DYACHOK_SON, LANDLORD, SOLDIER_SPOUSE,
+from verso.ru.dsl.statuses import (DYACHOK, DYACHOK_SON, LANDLORD, RETIRED_SOLDIER, SOLDIER_SPOUSE,
                                    YASAK_PEASANT_DAUGHTER, YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE,
                                    YASAK_PEASANT_SON)
 
@@ -25,7 +25,7 @@ zhuravkino_deaths_1828 = death_records(
                        death(2, Gender.FEMALE, 10, None,
                              deceased=person("Анна", "Трафимова"), age=60),
                        death(2, Gender.MALE, 10, None,
-                             deceased=person("Петр", "Григорьев", status="отставной от военной службы"), age=65),
+                             deceased=person("Петр", "Григорьев", status=RETIRED_SOLDIER, comment="отставной от военной службы"), age=65),
                        death(3, Gender.MALE, 14, None,
                              deceased=person("Нестер", "Семенов"), age=76),
                        ),

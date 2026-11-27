@@ -9,7 +9,7 @@ from verso.ru.dsl.causes_of_death import (CHILDBIRTH, COLIC, CONSUMPTION, DIARRH
                                           FEVER, HEADACHE, NATURAL, PLEURISY, SUDDEN_DEATH)
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_DAUGHTER, KAZENNYJ_PEASANT_FEMALE,
                                    KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_SON,
-                                   KAZENNYJ_PEASANT_WIDOW, MESHCHANIN, RETIRED_SOLDIER,
+                                   KAZENNYJ_PEASANT_WIDOW, MESHCHANIN, RETIRED_SOLDIER, SOLDIER,
                                    SOLDIER_DAUGHTER, SOLDIER_SON, SOLDIER_WIFE, WIDOW)
 
 # МК 1858, ЦГАРМ 57-6-422 (кн. № 42), ч. 3 лл. 192об–200об (альбом Photos «1858», pk 1223, кадры 26–34; кадр k = лл. (166+k)об и (167+k)).
@@ -170,7 +170,7 @@ zhuravkino_deaths_1858 = death_records(
           *death_month(Month.JUNE,
                        death(17, Gender.MALE, 9, 10,
                              deceased=person("Стефанъ", status=SOLDIER_SON), age="1 месяц",
-                             relatives=[relative(person("Сысой", "Прохоровъ", status="уволенный во временный отпуск рядовой", comment="отчество читается неуверенно"), Relationship.FATHER)],
+                             relatives=[relative(person("Сысой", "Прохоровъ", status=SOLDIER, comment="уволенный во временный отпуск рядовой; отчество читается неуверенно"), Relationship.FATHER)],
                              cause_of_death=DIARRHEA,
                              comment="в книге «Степанъ»; возраст «одного …да» — месяца или года, читается неуверенно; вероятно, он же: м18 крещений 20.04.1858 (там отец «Сысой Прокопьевъ»)"),
                        death(17, Gender.FEMALE, 13, 14,
@@ -188,7 +188,7 @@ zhuravkino_deaths_1858 = death_records(
           *death_month(Month.JULY,
                        death(19, Gender.FEMALE, 6, 7,
                              deceased=person("Дарья", status=SOLDIER_DAUGHTER), age="полгода",
-                             relatives=[relative(person("Тимоѳей", "Перфиловъ", status="уволенный во временный отпуск рядовой"), Relationship.FATHER)],
+                             relatives=[relative(person("Тимоѳей", "Перфиловъ", status=SOLDIER, comment="уволенный во временный отпуск рядовой"), Relationship.FATHER)],
                              cause_of_death=DIARRHEA,
                              comment="она же: ж10 крещений 10.03.1858"),
                        death(18, Gender.MALE, 7, 8,
@@ -300,7 +300,7 @@ zhuravkino_deaths_1858 = death_records(
           *death_month(Month.NOVEMBER,
                        death(27, Gender.FEMALE, 2, 3,
                              deceased=person("Евдокія", status=SOLDIER_DAUGHTER), age="3 месяца",
-                             relatives=[relative(person("Капитонъ", "Максимовъ", status="уволенный во временный отпуск рядовой"), Relationship.FATHER)],
+                             relatives=[relative(person("Капитонъ", "Максимовъ", status=SOLDIER, comment="уволенный во временный отпуск рядовой"), Relationship.FATHER)],
                              cause_of_death=DIARRHEA,
                              comment="она же: ж29 крещений 27.07.1858; возраст «трехъ мѣсяцевъ»(?)"),
                        death(31, Gender.MALE, 25, 26,

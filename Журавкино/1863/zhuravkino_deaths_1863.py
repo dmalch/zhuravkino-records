@@ -9,7 +9,7 @@ from verso.ru.dsl.causes_of_death import (COLD, COLIC, CONSUMPTION, DIARRHEA, FE
 from verso.ru.dsl.statuses import (KAZENNYJ_PEASANT_DAUGHTER, KAZENNYJ_PEASANT_FEMALE,
                                    KAZENNYJ_PEASANT_MAIDEN, KAZENNYJ_PEASANT_MALE,
                                    KAZENNYJ_PEASANT_SON, KAZENNYJ_PEASANT_WIDOW, MESHCHANIN,
-                                   MESHCHANIN_SON, TEMP_OBLIGED_PEASANT_MALE)
+                                   MESHCHANIN_SON, SOLDIER, SOLDIER_SON, TEMP_OBLIGED_PEASANT_MALE)
 
 # МК 1863, ЦГАРМ 57-6-468, ч. 3 лл. 195об–202об (альбом Photos «1863», кадры 27–34).
 # 45 погребений (м20, ж25): январь 2, февраль 3, март 4, апрель 3, май 4, июнь 4, июль 6, август 5, сентябрь 1, октябрь 0, ноябрь 6, декабрь 5.
@@ -168,8 +168,8 @@ zhuravkino_deaths_1863 = death_records(
                              deceased=person("Савва", "Перфиловъ", status=TEMP_OBLIGED_PEASANT_MALE, residence=None, comment="«помещицы …ловой(?) временнообязанный крестьянинъ»; фамилия помещицы не разобрана (ср. «Колмаковой» в ч. 1, м45)"), age=55,
                              comment="«отъ натуральной»"),
                        death(13, Gender.MALE, 22, 23,
-                             deceased=person("Тихонъ", status="сын бессрочноотпускного рядового"), age="1 мес",
-                             relatives=[relative(person("Ѳома", "Сергѣевъ", status="бессрочноотпускной рядовой", comment="«уволеннаго во временный отпускъ рядоваго»"), Relationship.FATHER)],
+                             deceased=person("Тихонъ", status=SOLDIER_SON, comment="сын бессрочноотпускного рядового"), age="1 мес",
+                             relatives=[relative(person("Ѳома", "Сергѣевъ", status=SOLDIER, comment="«уволеннаго во временный отпускъ рядоваго»"), Relationship.FATHER)],
                              cause_of_death=DIARRHEA,
                              comment="«отъ поноса»; день смерти читается неуверенно; родился 9.06.1863 (ч. 1, м18)"),
                        death(14, Gender.MALE, 22, 23,

@@ -8,8 +8,8 @@ from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, death, de
                           death_records, page, person, relative)
 from verso.ru.dsl.causes_of_death import (CONSUMPTION, COUGH, DIARRHEA, FEVER, MEASLES, NATURAL,
                                           PLEURISY, SMALLPOX)
-from verso.ru.dsl.statuses import (YASAK_PEASANT_DAUGHTER, YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE,
-                                   YASAK_PEASANT_SON, YASAK_PEASANT_WIDOW)
+from verso.ru.dsl.statuses import (UNTER_OFFICER, YASAK_PEASANT_DAUGHTER, YASAK_PEASANT_FEMALE,
+                                   YASAK_PEASANT_MALE, YASAK_PEASANT_SON, YASAK_PEASANT_WIDOW)
 
 zhuravkino_deaths_1838 = death_records(
     "ЦГАРМ", "57", "6", "181", "Журавкино", "Живоносного Источника Пресвятой Богородицы",
@@ -36,7 +36,7 @@ zhuravkino_deaths_1838 = death_records(
                        ),
           *death_month(Month.FEBRUARY,
                        death(3, Gender.MALE, 21, None,
-                             deceased=person("Степан", "Захаров", last_name_orig="Алмаев", residence="Авдалово", status="отпущенный по билету военнослужащий вахмистр"), age=47,
+                             deceased=person("Степан", "Захаров", last_name_orig="Алмаев", residence="Авдалово", status=UNTER_OFFICER, comment="отпущенный по билету военнослужащий вахмистр"), age=47,
                              cause_of_death=PLEURISY),
                        death(5, Gender.FEMALE, 24, None,
                              deceased=person("Елена", residence="Авдалово", status=ISHEEV_ET_PEASANT_DAUGHTER), age="6 м",

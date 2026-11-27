@@ -6,7 +6,7 @@ from verso.ru.dsl import (Month, RecordDefaults, Relationship, Side, marriage, m
 from verso.ru.dsl.statuses import (DEACON, DYACHOK, KAZENNYJ_PEASANT_FEMALE, KAZENNYJ_PEASANT_GIRL,
                                    KAZENNYJ_PEASANT_MAIDEN, KAZENNYJ_PEASANT_MALE,
                                    KAZENNYJ_PEASANT_WIDOW, MESHCHANIN, MESHCHANIN_DAUGHTER, PRIEST,
-                                   SEXTON, SOLDIER_DAUGHTER)
+                                   SEXTON, SOLDIER, SOLDIER_DAUGHTER)
 
 zhuravkino_marriages_1849 = marriage_records(
     "ЦГАРМ", "57", "1", "423", "Журавкино", "Николаевская",
@@ -90,7 +90,7 @@ zhuravkino_marriages_1849 = marriage_records(
                        marriage(7, 25, reviewed=False,
                              groom=person("Лука", "Андреевъ", "Барминъ"), groom_age=18, groom_marriage_num=1,
                              bride=person("Ирина", "Алексѣева", status=SOLDIER_DAUGHTER, comment="«дочь военнослужащаго Алексѣя Максимова Дырина»"), bride_age=20,
-                             relatives=[relative(person("Алексѣй", "Максимовъ", "Дыринъ", status="военнослужащий", residence=None), Relationship.FATHER, "невеста")],
+                             relatives=[relative(person("Алексѣй", "Максимовъ", "Дыринъ", status=SOLDIER, comment="военнослужащий", residence=None), Relationship.FATHER, "невеста")],
                              witness1=person("Иванъ", "Ефимовъ", "Блохинъ", comment="отчество и фамилия читаются неуверенно", side=Side.GROOM),
                              witness2=person("Ѳеодоръ", "Тимоѳеевъ", "Купцовъ", side=Side.GROOM),
                              witness3=person("Моисей", "Ивановъ", "Баландинъ", side=Side.BRIDE),

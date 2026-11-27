@@ -14,7 +14,7 @@ from verso.ru.dsl.statuses import (DEACON, DYACHOK, DYACHOK_SON, DYACHOK_WIFE,
                                    MESHCHANIN, MESHCHANIN_SON, MESHCHANIN_WIFE, SOLDIER,
                                    SOLDIER_DAUGHTER, SOLDIER_SON, SOLDIER_WIFE,
                                    STATE_PEASANT_DAUGHTER, STATE_PEASANT_LEGAL_WIFE,
-                                   STATE_PEASANT_MALE)
+                                   STATE_PEASANT_MALE, UNTER_OFFICER)
 
 zhuravkino_births_1855 = birth_records(
     "ЦГАРМ", "57", "1", "431", "Журавкино", "Николаевская",
@@ -233,7 +233,7 @@ zhuravkino_births_1855 = birth_records(
                              child=person("Василій", status="сын диакона"),
                              father=person("Александръ", "Никифоровъ", last_name_orig="Богородицкій", status=DEACON, comment="«приходскій Діаконъ»"),
                              mother=person("Дарья", "Яковлева", status="диаконица"),
-                             god_parent1=person("Василій", "Ивановъ", "Митуловъ", status="отставной унтер-офицер", residence=None, comment="«отставной унтеръ-офицеръ»; фамилия читается неуверенно"),
+                             god_parent1=person("Василій", "Ивановъ", "Митуловъ", status=UNTER_OFFICER, residence=None, comment="«отставной унтеръ-офицеръ»; фамилия читается неуверенно"),
                              god_parent2=person("Лукія", "Степанова", status="дворовая девка помещицы Варвары Слепцовой", comment="«помѣщицы Варвары Слепцовой дворовая дѣвка»; имя читается неуверенно")),
                        ),
           ),

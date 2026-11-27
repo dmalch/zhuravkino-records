@@ -380,7 +380,7 @@ zhuravkino_deaths_1909 = death_records(
                              comment="кадр 67"),
                        death(35, Gender.FEMALE, 8, 9, reviewed=False,
                              deceased=person("Анастасія"), age=1,
-                             relatives=[relative(person("Ѳеодоръ", "Сергѣевъ", last_name_orig="Стручковъ", status="состоящий на военной службе", residence="Авдалово"), Relationship.FATHER)],
+                             relatives=[relative(person("Ѳеодоръ", "Сергѣевъ", last_name_orig="Стручковъ", status=SOLDIER, comment="состоящий на военной службе", residence="Авдалово"), Relationship.FATHER)],
                              cause_of_death=WHOOPING_COUGH,
                              comment="даты «〃»"),
                        death(33, Gender.MALE, 10, 11, reviewed=False,

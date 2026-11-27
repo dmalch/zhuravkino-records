@@ -5,8 +5,9 @@ from corpus.statuses import (SLEPTSOV_AI_PEASANT_DAUGHTER, SLEPTSOV_AI_PEASANT_M
 from verso.ru.dsl import (Gender, Month, RecordDefaults, Relationship, death, death_month,
                           death_records, page, person, relative)
 from verso.ru.dsl.causes_of_death import CONSUMPTION, DIARRHEA, NATURAL
-from verso.ru.dsl.statuses import (SOLDIER_SON, SOLDIER_SPOUSE, YASAK_PEASANT_DAUGHTER,
-                                   YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE, YASAK_PEASANT_SON)
+from verso.ru.dsl.statuses import (RETIRED_SOLDIER, SOLDIER_SON, SOLDIER_SPOUSE, UNTER_OFFICER,
+                                   YASAK_PEASANT_DAUGHTER, YASAK_PEASANT_FEMALE, YASAK_PEASANT_MALE,
+                                   YASAK_PEASANT_SON)
 
 zhuravkino_deaths_1830 = death_records(
     "ЦГАРМ", "57", "6", "134", "Журавкино", "Николая Чудотворца",
@@ -75,7 +76,7 @@ zhuravkino_deaths_1830 = death_records(
                              deceased=person("Иван", status=SLEPTSOV_GG_PEASANT_SON), age=1,
                              relatives=[relative(person("Митрофан", "Яковлев", status=SLEPTSOV_GG_PEASANT_MALE), Relationship.FATHER)]),
                        death(13, Gender.MALE, 25, None,
-                             deceased=person("Агап", "Устинов", status="отставной унтер-офицер"), age=80),
+                             deceased=person("Агап", "Устинов", status=UNTER_OFFICER, comment="отставной унтер-офицер"), age=80),
                        death(14, Gender.MALE, 25, None,
                              deceased=person("Афанасий", "Стефанов"), age=40),
                        ),
@@ -133,7 +134,7 @@ zhuravkino_deaths_1830 = death_records(
                              deceased=person("Параскева", status=YASAK_PEASANT_DAUGHTER), age="3 н",
                              relatives=[relative(person("Михаил", "Гардеев"), Relationship.FATHER)]),
                        death(22, Gender.MALE, 9, None,
-                             deceased=person("Семен", "Федосеев", status="отставной военный"), age=49),
+                             deceased=person("Семен", "Федосеев", status=RETIRED_SOLDIER, comment="отставной военный"), age=49),
                        ),
           ),
     defaults=RecordDefaults(

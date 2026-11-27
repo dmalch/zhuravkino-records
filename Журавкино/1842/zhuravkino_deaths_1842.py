@@ -14,7 +14,7 @@ from verso.ru.dsl.causes_of_death import (CONSUMPTION, CONVULSIONS, DIARRHEA, FE
 from verso.ru.dsl.statuses import (ECON_PEASANT_MALE, ECON_PEASANT_SON, KAZENNYJ_PEASANT_DAUGHTER,
                                    KAZENNYJ_PEASANT_DAUGHTER_MAIDEN, KAZENNYJ_PEASANT_FEMALE,
                                    KAZENNYJ_PEASANT_MALE, KAZENNYJ_PEASANT_SON, MESHCHANIN,
-                                   MESHCHANIN_DAUGHTER, SOLDIER_WIFE)
+                                   MESHCHANIN_DAUGHTER, RETIRED_SOLDIER, SOLDIER_WIFE)
 
 zhuravkino_deaths_1842 = death_records(
     "ЦГАРМ", "57", "1", "409", "Журавкино", "Николаевская",
@@ -157,7 +157,7 @@ zhuravkino_deaths_1842 = death_records(
                        death(14, Gender.MALE, 25, 26,
                              deceased=person("Савелій", "Никифоровъ", "Рузаевъ"), age=69),
                        death(15, Gender.MALE, 25, 26,
-                             deceased=person("Николай", "Никифоровъ", "Трушинъ", status="отставной военнослужащий", residence="Авдалово"), age=62),
+                             deceased=person("Николай", "Никифоровъ", "Трушинъ", status=RETIRED_SOLDIER, comment="отставной военнослужащий", residence="Авдалово"), age=62),
                        death(16, Gender.MALE, 29, 30,
                              deceased=person("Вуколъ", status=ECON_PEASANT_SON), age="полгода",
                              relatives=[relative(person("Марка", "Егоровъ", status=ECON_PEASANT_MALE, residence="Спасск"), Relationship.FATHER)],
